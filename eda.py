@@ -1,121 +1,101 @@
-# 🛒 Instacart Market Basket Analysis - EDA
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+🛒 Groceries Market Basket Analysis - EDA
+"""
 
-# =======================
-# 1. Import Libraries
-# =======================
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from collections import Counter
 
-sns.set(style="whitegrid")
+sns.set(style="whitegrid", palette="muted")
 
-# =======================
-# 2. Load Data
-# =======================
-orders = pd.read_csv("archive/orders.csv")
-order_products = pd.read_csv("archive/order_products__prior.csv")
-products = pd.read_csv("archive/products.csv")
-aisles = pd.read_csv("archive/aisles.csv")
-departments = pd.read_csv("archive/departments.csv")
+# ------------------------------
+# 1. Load Cleaned Data
+# ------------------------------
+import json
 
-# Merge product details into order_products
-order_products = order_products.merge(products, on="product_id", how="left")
-order_products = order_products.merge(aisles, on="aisle_id", how="left")
-order_products = order_products.merge(departments, on="department_id", how="left")
+with open("clean/groceries_baskets.json", "r") as f:
+    transactions = json.load(f)
 
-print("✅ Data Loaded Successfully")
+print(f"✅ Loaded {len(transactions)} transactions")
 
-# =======================
+# ------------------------------
+# 2. Flatten Transactions for Item-level Analysis
+# ------------------------------
+all_items = [item for basket in transactions for item in basket if item != ""]
+item_counts = Counter(all_items)
+
+# ------------------------------
 # 3. Univariate Analysis
-# =======================
+# ------------------------------
 
-# Orders per user
-orders_per_user = orders.groupby("user_id")["order_id"].count()
-plt.figure(figsize=(8,5))
-sns.histplot(orders_per_user, bins=30, kde=False)
-plt.title("Orders per User")
-plt.xlabel("Number of Orders")
-plt.ylabel("Users")
-plt.show()
+# 3a. Basket Size Distribution
+basket_sizes = [len([item for item in basket if item != ""]) for basket in transactions]
 
-# Days since prior order
 plt.figure(figsize=(8,5))
-sns.histplot(orders["days_since_prior_order"].dropna(), bins=30, kde=False)
-plt.title("Days Since Prior Order")
-plt.xlabel("Days")
-plt.ylabel("Frequency")
-plt.show()
-
-# Basket size distribution
-basket_size = order_products.groupby("order_id")["product_id"].count()
-plt.figure(figsize=(8,5))
-sns.histplot(basket_size, bins=30, kde=False)
+plt.hist(basket_sizes, bins=30, color='skyblue', edgecolor='black')
 plt.title("Basket Size Distribution")
-plt.xlabel("Products per Order")
+plt.xlabel("Number of Items per Basket")
 plt.ylabel("Frequency")
 plt.show()
 
-# Most popular products
+# 3b. Most Popular Items
+top_items = item_counts.most_common(15)
+items, counts = zip(*top_items)
+
 plt.figure(figsize=(10,6))
-order_products["product_name"].value_counts().head(10).plot(kind="bar")
-plt.title("Top 10 Most Popular Products")
-plt.ylabel("Count")
+plt.barh(items[::-1], counts[::-1], color='salmon')
+plt.title("Top 15 Most Frequent Items")
+plt.xlabel("Number of Purchases")
+plt.ylabel("Item")
 plt.show()
 
-# =======================
+# ------------------------------
 # 4. Bivariate Analysis
-# =======================
+# ------------------------------
+# Example: Basket size vs top item presence
+import numpy as np
 
-# Relationship between order_number and reorder ratio
-orders_with_reorder = order_products.groupby("order_id")["reordered"].mean().reset_index()
-merged_orders = orders.merge(orders_with_reorder, on="order_id", how="left")
+top_item_name = items[0]  # most frequent item
+basket_has_top_item = [top_item_name in basket for basket in transactions]
 
 plt.figure(figsize=(8,5))
-sns.lineplot(x="order_number", y="reordered", data=merged_orders, errorbar=None)
-plt.title("Reorder Ratio vs. Order Number")
-plt.xlabel("Order Number")
-plt.ylabel("Reorder Ratio")
-plt.show()
-
-# Basket size vs reorder ratio
-basket_reorder = order_products.groupby("order_id")["reordered"].mean()
-plt.figure(figsize=(8,5))
-sns.scatterplot(x=basket_size, y=basket_reorder)
-plt.title("Basket Size vs. Reorder Ratio")
+plt.scatter(basket_sizes, basket_has_top_item, alpha=0.3)
+plt.title(f"Basket Size vs Presence of '{top_item_name}'")
 plt.xlabel("Basket Size")
-plt.ylabel("Reorder Ratio")
+plt.ylabel(f"Contains '{top_item_name}' (0/1)")
 plt.show()
 
-# Department vs Number of Products
-plt.figure(figsize=(12,6))
-sns.countplot(y="department", data=order_products, order=order_products["department"].value_counts().index)
-plt.title("Products Bought by Department")
+# ------------------------------
+# 5. Item Co-occurrence Analysis (Multivariate)
+# ------------------------------
+from itertools import combinations
+from collections import defaultdict
+
+co_occurrence = defaultdict(int)
+
+# Count pairwise co-occurrences for top 20 items
+top_20_items = [item for item, _ in item_counts.most_common(20)]
+
+for basket in transactions:
+    basket_items = [item for item in basket if item in top_20_items]
+    for pair in combinations(basket_items, 2):
+        co_occurrence[tuple(sorted(pair))] += 1
+
+# Convert to DataFrame for heatmap
+import numpy as np
+
+co_matrix = pd.DataFrame(np.zeros((20,20)), index=top_20_items, columns=top_20_items)
+
+for (i,j), count in co_occurrence.items():
+    co_matrix.loc[i,j] = count
+    co_matrix.loc[j,i] = count
+
+plt.figure(figsize=(12,10))
+sns.heatmap(co_matrix, annot=True, fmt=".0f", cmap="YlGnBu")
+plt.title("Co-occurrence of Top 20 Items")
 plt.show()
 
-# =======================
-# 5. Multivariate Analysis
-# =======================
-
-# Correlation Heatmap
-features = orders[["order_number", "days_since_prior_order"]].dropna()
-plt.figure(figsize=(6,4))
-sns.heatmap(features.corr(), annot=True, cmap="coolwarm")
-plt.title("Correlation Heatmap")
-plt.show()
-
-# Top 5 aisles across top 5 departments
-top_aisles = order_products["aisle"].value_counts().head(5).index
-top_depts = order_products["department"].value_counts().head(5).index
-
-subset = order_products[(order_products["aisle"].isin(top_aisles)) & 
-                        (order_products["department"].isin(top_depts))]
-
-plt.figure(figsize=(12,6))
-sns.countplot(x="aisle", hue="department", data=subset)
-plt.title("Top Aisles within Top Departments")
-plt.show()
-
-# Pairplot (sampled for performance)
-sample_orders = orders.sample(5000, random_state=42)
-sns.pairplot(sample_orders[["order_number","days_since_prior_order","eval_set"]], hue="eval_set")
-plt.show()
+print("\n✅ Groceries EDA Completed Successfully!")

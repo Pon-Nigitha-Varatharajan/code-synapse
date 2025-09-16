@@ -1,0 +1,232 @@
+if,then,support,confidence,lift
+['tropical fruit'],yogurt,0.0293,0.2791,2.0005
+['yogurt'],tropical fruit,0.0293,0.2099,2.0005
+['cream cheese'],yogurt,0.0124,0.3128,2.2424
+['pip fruit'],yogurt,0.018,0.2379,1.7054
+['long life bakery product'],other vegetables,0.0107,0.2853,1.4746
+['long life bakery product'],whole milk,0.0135,0.3614,1.4144
+['whole milk'],other vegetables,0.0748,0.2929,1.5136
+['other vegetables'],whole milk,0.0748,0.3868,1.5136
+['yogurt'],whole milk,0.056,0.4016,1.5717
+['whole milk'],yogurt,0.056,0.2193,1.5717
+['butter'],whole milk,0.0276,0.4972,1.9461
+['butter'],yogurt,0.0146,0.2642,1.894
+['bottled beer'],other vegetables,0.0162,0.2008,1.0375
+['rolls/buns'],other vegetables,0.0426,0.2316,1.197
+['other vegetables'],rolls/buns,0.0426,0.2202,1.197
+['chocolate'],other vegetables,0.0127,0.2561,1.3238
+['white bread'],other vegetables,0.0137,0.3261,1.6853
+['bottled water'],other vegetables,0.0248,0.2245,1.1601
+['tropical fruit'],other vegetables,0.0359,0.3421,1.7678
+['citrus fruit'],tropical fruit,0.0199,0.2408,2.2947
+['bottled water'],yogurt,0.023,0.2079,1.4904
+['curd'],whole milk,0.0261,0.4905,1.9195
+['tropical fruit'],whole milk,0.0423,0.4031,1.5776
+['bottled water'],whole milk,0.0344,0.3109,1.2169
+['citrus fruit'],whole milk,0.0305,0.3686,1.4424
+['citrus fruit'],yogurt,0.0217,0.2617,1.8758
+['curd'],yogurt,0.0173,0.3244,2.3256
+['frankfurter'],rolls/buns,0.0192,0.3259,1.7716
+['rolls/buns'],soda,0.0383,0.2084,1.1951
+['soda'],rolls/buns,0.0383,0.2198,1.1951
+['root vegetables'],other vegetables,0.0474,0.4347,2.2466
+['other vegetables'],root vegetables,0.0474,0.2449,2.2466
+['waffles'],other vegetables,0.0101,0.2619,1.3536
+['tropical fruit'],root vegetables,0.021,0.2006,1.8402
+['salty snack'],other vegetables,0.0108,0.2849,1.4726
+['root vegetables'],rolls/buns,0.0243,0.2229,1.2121
+['tropical fruit'],rolls/buns,0.0246,0.2345,1.2749
+['sausage'],rolls/buns,0.0306,0.3258,1.771
+['chocolate'],rolls/buns,0.0118,0.2377,1.2923
+['chocolate'],soda,0.0135,0.2725,1.5629
+['sausage'],soda,0.0243,0.2587,1.4833
+['shopping bags'],soda,0.0246,0.2497,1.4322
+['fruit/vegetable juice'],soda,0.0184,0.2546,1.4599
+['bottled water'],rolls/buns,0.0242,0.219,1.1904
+['napkins'],rolls/buns,0.0117,0.2233,1.214
+['napkins'],other vegetables,0.0144,0.2757,1.425
+['hamburger meat'],other vegetables,0.0138,0.4159,2.1494
+['sugar'],whole milk,0.015,0.4444,1.7394
+['root vegetables'],whole milk,0.0489,0.4487,1.756
+['sugar'],other vegetables,0.0108,0.3183,1.6451
+['berries'],other vegetables,0.0103,0.3089,1.5963
+['pork'],whole milk,0.0222,0.3845,1.5047
+['whipped/sour cream'],whole milk,0.0322,0.4496,1.7598
+['berries'],whole milk,0.0118,0.3547,1.3883
+['pork'],other vegetables,0.0217,0.3757,1.9415
+['whipped/sour cream'],other vegetables,0.0289,0.4028,2.0819
+['pork'],soda,0.0119,0.2063,1.1833
+['pastry'],soda,0.021,0.2366,1.3567
+['dessert'],whole milk,0.0137,0.3699,1.4475
+['dessert'],other vegetables,0.0116,0.3123,1.6142
+['waffles'],whole milk,0.0127,0.3307,1.2942
+['domestic eggs'],yogurt,0.0143,0.226,1.6198
+['root vegetables'],yogurt,0.0258,0.2369,1.6985
+['pastry'],whole milk,0.0332,0.3737,1.4626
+['brown bread'],whole milk,0.0252,0.3887,1.5213
+['domestic eggs'],whole milk,0.03,0.4728,1.8502
+['brown bread'],yogurt,0.0145,0.2241,1.6067
+['domestic eggs'],root vegetables,0.0143,0.226,2.0731
+['coffee'],whole milk,0.0187,0.3222,1.2611
+['berries'],yogurt,0.0106,0.318,2.2798
+['bottled water'],soda,0.029,0.2622,1.5036
+['yogurt'],rolls/buns,0.0344,0.2464,1.3394
+['newspapers'],rolls/buns,0.0197,0.2471,1.3436
+['curd'],other vegetables,0.0172,0.3225,1.6668
+['butter'],root vegetables,0.0129,0.233,2.1379
+['curd'],root vegetables,0.0109,0.2042,1.8734
+['butter'],other vegetables,0.02,0.3615,1.8681
+['whipped/sour cream'],rolls/buns,0.0146,0.2043,1.1105
+['whipped/sour cream'],root vegetables,0.0171,0.2383,2.1862
+['butter'],rolls/buns,0.0134,0.2422,1.3168
+['ham'],whole milk,0.0115,0.4414,1.7275
+['brown bread'],other vegetables,0.0187,0.2884,1.4905
+['margarine'],other vegetables,0.0197,0.3368,1.7407
+['fruit/vegetable juice'],other vegetables,0.021,0.2911,1.5047
+['domestic eggs'],other vegetables,0.0223,0.351,1.8138
+['beef'],rolls/buns,0.0136,0.2597,1.4119
+['pastry'],rolls/buns,0.0209,0.2354,1.28
+['frozen vegetables'],whole milk,0.0204,0.4249,1.6631
+['frozen vegetables'],other vegetables,0.0178,0.37,1.9121
+['salty snack'],whole milk,0.0112,0.2957,1.1573
+['beef'],whole milk,0.0213,0.405,1.5852
+['sausage'],whole milk,0.0299,0.3182,1.2453
+['pip fruit'],whole milk,0.0301,0.3978,1.557
+['pip fruit'],tropical fruit,0.0204,0.2702,2.5746
+['rolls/buns'],whole milk,0.0566,0.3079,1.205
+['whole milk'],rolls/buns,0.0566,0.2216,1.205
+['chocolate'],whole milk,0.0167,0.3361,1.3152
+['margarine'],whole milk,0.0242,0.4132,1.6171
+['oil'],whole milk,0.0113,0.4022,1.574
+['newspapers'],whole milk,0.0274,0.3427,1.3411
+['frankfurter'],whole milk,0.0205,0.3483,1.363
+['butter milk'],whole milk,0.0116,0.4145,1.6224
+['bottled beer'],soda,0.017,0.2109,1.2092
+['fruit/vegetable juice'],whole milk,0.0266,0.3685,1.4422
+['domestic eggs'],rolls/buns,0.0157,0.2468,1.3418
+['margarine'],rolls/buns,0.0147,0.2517,1.3686
+['frozen vegetables'],rolls/buns,0.0102,0.2114,1.1494
+['fruit/vegetable juice'],rolls/buns,0.0145,0.2011,1.0935
+['frozen vegetables'],root vegetables,0.0116,0.241,2.2112
+['sausage'],yogurt,0.0196,0.2089,1.4973
+['chicken'],root vegetables,0.0109,0.2536,2.3262
+['chicken'],other vegetables,0.0179,0.4171,2.1554
+['citrus fruit'],root vegetables,0.0177,0.2138,1.9611
+['citrus fruit'],other vegetables,0.0289,0.3489,1.8031
+['fruit/vegetable juice'],yogurt,0.0187,0.2588,1.8551
+['napkins'],yogurt,0.0123,0.235,1.6842
+['napkins'],whole milk,0.0197,0.3767,1.4743
+['beef'],root vegetables,0.0174,0.3314,3.0404
+['frankfurter'],other vegetables,0.0165,0.2793,1.4435
+['sausage'],other vegetables,0.0269,0.2868,1.4822
+['hamburger meat'],whole milk,0.0147,0.4434,1.7354
+['cream cheese'],whole milk,0.0165,0.4154,1.6257
+['pastry'],other vegetables,0.0226,0.2537,1.3112
+['shopping bags'],other vegetables,0.0232,0.2353,1.216
+['coffee'],other vegetables,0.0134,0.2312,1.1947
+['hard cheese'],whole milk,0.0101,0.4108,1.6077
+['hygiene articles'],whole milk,0.0128,0.3889,1.522
+['pip fruit'],other vegetables,0.0261,0.3454,1.7852
+['citrus fruit'],rolls/buns,0.0168,0.2027,1.102
+['yogurt'],other vegetables,0.0434,0.3112,1.6085
+['other vegetables'],yogurt,0.0434,0.2244,1.6085
+['frozen vegetables'],yogurt,0.0124,0.2579,1.8489
+['white bread'],whole milk,0.0171,0.4058,1.5881
+['cream cheese'],other vegetables,0.0137,0.3462,1.789
+['whipped/sour cream'],yogurt,0.0207,0.2894,2.0743
+['sliced cheese'],whole milk,0.0108,0.4398,1.7214
+['pip fruit'],root vegetables,0.0156,0.2056,1.8867
+['pork'],root vegetables,0.0136,0.2363,2.1682
+['butter milk'],other vegetables,0.0104,0.3709,1.9169
+['beef'],other vegetables,0.0197,0.376,1.9431
+['napkins'],soda,0.012,0.2291,1.314
+['newspapers'],other vegetables,0.0193,0.242,1.2509
+['onions'],whole milk,0.0121,0.3902,1.527
+['onions'],other vegetables,0.0142,0.459,2.3723
+['margarine'],yogurt,0.0142,0.2431,1.7423
+['chicken'],whole milk,0.0176,0.41,1.6044
+['beef'],yogurt,0.0117,0.2229,1.5976
+['white bread'],soda,0.0103,0.244,1.399
+"['tropical fruit', 'yogurt']",whole milk,0.0151,0.5174,2.0248
+"['tropical fruit', 'whole milk']",yogurt,0.0151,0.3582,2.5675
+"['yogurt', 'whole milk']",tropical fruit,0.0151,0.2704,2.5771
+"['citrus fruit', 'yogurt']",whole milk,0.0103,0.4742,1.8558
+"['citrus fruit', 'whole milk']",yogurt,0.0103,0.3367,2.4134
+"['yogurt', 'curd']",whole milk,0.0101,0.5824,2.2791
+"['whole milk', 'curd']",yogurt,0.0101,0.3852,2.7614
+"['tropical fruit', 'other vegetables']",root vegetables,0.0123,0.3428,3.1448
+"['tropical fruit', 'root vegetables']",other vegetables,0.0123,0.5845,3.021
+"['root vegetables', 'other vegetables']",tropical fruit,0.0123,0.2597,2.4745
+"['rolls/buns', 'root vegetables']",other vegetables,0.0122,0.5021,2.5949
+"['rolls/buns', 'other vegetables']",root vegetables,0.0122,0.2864,2.6275
+"['root vegetables', 'other vegetables']",rolls/buns,0.0122,0.2575,1.4
+['root vegetables'],whole milk,0.0232,0.2127,2.8421
+"['root vegetables', 'whole milk']",other vegetables,0.0232,0.474,2.4498
+"['root vegetables', 'other vegetables']",whole milk,0.0232,0.4893,1.9148
+"['whole milk', 'other vegetables']",root vegetables,0.0232,0.3098,2.8421
+['whipped/sour cream'],whole milk,0.0146,0.2043,2.7294
+"['whole milk', 'whipped/sour cream']",other vegetables,0.0146,0.4543,2.3477
+"['other vegetables', 'whipped/sour cream']",whole milk,0.0146,0.507,1.9844
+"['pork', 'whole milk']",other vegetables,0.0102,0.4587,2.3707
+"['pork', 'other vegetables']",whole milk,0.0102,0.4695,1.8374
+"['soda', 'whole milk']",other vegetables,0.0139,0.3477,1.797
+"['soda', 'other vegetables']",whole milk,0.0139,0.4255,1.6651
+"['tropical fruit', 'whole milk']",root vegetables,0.012,0.2837,2.6024
+"['tropical fruit', 'root vegetables']",whole milk,0.012,0.57,2.231
+"['root vegetables', 'whole milk']",tropical fruit,0.012,0.2453,2.3379
+"['soda', 'yogurt']",whole milk,0.0105,0.3829,1.4985
+"['soda', 'whole milk']",yogurt,0.0105,0.2614,1.874
+"['root vegetables', 'yogurt']",whole milk,0.0145,0.563,2.2034
+"['root vegetables', 'whole milk']",yogurt,0.0145,0.2973,2.1311
+"['yogurt', 'whole milk']",root vegetables,0.0145,0.2595,2.381
+"['rolls/buns', 'tropical fruit']",whole milk,0.011,0.4463,1.7466
+"['tropical fruit', 'whole milk']",rolls/buns,0.011,0.2596,1.4115
+"['rolls/buns', 'whole milk']",other vegetables,0.0179,0.316,1.633
+"['rolls/buns', 'other vegetables']",whole milk,0.0179,0.42,1.6439
+"['whole milk', 'other vegetables']",rolls/buns,0.0179,0.2391,1.3001
+"['rolls/buns', 'root vegetables']",whole milk,0.0127,0.523,2.0469
+"['rolls/buns', 'whole milk']",root vegetables,0.0127,0.2244,2.0589
+"['root vegetables', 'whole milk']",rolls/buns,0.0127,0.2599,1.4129
+"['citrus fruit', 'root vegetables']",other vegetables,0.0104,0.5862,3.0296
+"['citrus fruit', 'other vegetables']",root vegetables,0.0104,0.3592,3.295
+"['root vegetables', 'other vegetables']",citrus fruit,0.0104,0.2189,2.6446
+"['whole milk', 'domestic eggs']",other vegetables,0.0123,0.4102,2.1198
+"['other vegetables', 'domestic eggs']",whole milk,0.0123,0.5525,2.1623
+"['whole milk', 'pip fruit']",other vegetables,0.0135,0.4493,2.3222
+"['other vegetables', 'pip fruit']",whole milk,0.0135,0.5175,2.0254
+"['root vegetables', 'yogurt']",other vegetables,0.0129,0.5,2.5841
+"['root vegetables', 'other vegetables']",yogurt,0.0129,0.2725,1.9536
+"['yogurt', 'other vegetables']",root vegetables,0.0129,0.2974,2.7287
+"['whole milk', 'yogurt']",other vegetables,0.0223,0.3975,2.0541
+"['whole milk', 'other vegetables']",yogurt,0.0223,0.2976,2.133
+"['yogurt', 'other vegetables']",whole milk,0.0223,0.5129,2.0072
+"['fruit/vegetable juice', 'whole milk']",other vegetables,0.0105,0.3931,2.0318
+"['fruit/vegetable juice', 'other vegetables']",whole milk,0.0105,0.4976,1.9474
+"['tropical fruit', 'whole milk']",other vegetables,0.0171,0.4038,2.0871
+"['tropical fruit', 'other vegetables']",whole milk,0.0171,0.4759,1.8626
+"['whole milk', 'other vegetables']",tropical fruit,0.0171,0.2283,2.1753
+"['yogurt', 'whipped/sour cream']",other vegetables,0.0102,0.4902,2.5334
+"['other vegetables', 'whipped/sour cream']",yogurt,0.0102,0.3521,2.5241
+"['yogurt', 'other vegetables']",whipped/sour cream,0.0102,0.2342,3.2671
+['butter'],whole milk,0.0115,0.2073,2.7706
+"['whole milk', 'butter']",other vegetables,0.0115,0.417,2.155
+"['butter', 'other vegetables']",whole milk,0.0115,0.5736,2.2449
+"['tropical fruit', 'yogurt']",other vegetables,0.0123,0.4201,2.1713
+"['tropical fruit', 'other vegetables']",yogurt,0.0123,0.3428,2.4571
+"['yogurt', 'other vegetables']",tropical fruit,0.0123,0.2834,2.7005
+"['yogurt', 'whipped/sour cream']",whole milk,0.0109,0.5245,2.0527
+"['whole milk', 'whipped/sour cream']",yogurt,0.0109,0.3375,2.4196
+"['sausage', 'whole milk']",other vegetables,0.0102,0.3401,1.7579
+"['sausage', 'other vegetables']",whole milk,0.0102,0.3774,1.4768
+"['citrus fruit', 'whole milk']",other vegetables,0.013,0.4267,2.2051
+"['citrus fruit', 'other vegetables']",whole milk,0.013,0.4507,1.7639
+"['rolls/buns', 'yogurt']",whole milk,0.0156,0.4527,1.7716
+"['rolls/buns', 'whole milk']",yogurt,0.0156,0.2747,1.969
+"['yogurt', 'whole milk']",rolls/buns,0.0156,0.2777,1.5096
+"['whole milk', 'bottled water']",other vegetables,0.0108,0.3136,1.6208
+"['bottled water', 'other vegetables']",whole milk,0.0108,0.4344,1.7002
+"['rolls/buns', 'yogurt']",other vegetables,0.0115,0.3343,1.7278
+"['rolls/buns', 'other vegetables']",yogurt,0.0115,0.2697,1.9332
+"['yogurt', 'other vegetables']",rolls/buns,0.0115,0.2646,1.4388
+"['pastry', 'whole milk']",other vegetables,0.0106,0.318,1.6437
+"['pastry', 'other vegetables']",whole milk,0.0106,0.4685,1.8334
