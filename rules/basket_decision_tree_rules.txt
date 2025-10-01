@@ -1,0 +1,22 @@
+if has_vegetables == 0:
+  if has_fruits == 0:
+    if has_dairy == 0:
+      Leaf: 'Small Basket'
+    if has_dairy == 1:
+      Leaf: 'Big Basket'
+  if has_fruits == 1:
+    if has_dairy == 0:
+      Leaf: 'Big Basket'
+    if has_dairy == 1:
+      Leaf: 'Big Basket'
+if has_vegetables == 1:
+  if has_dairy == 0:
+    if has_beverages == 0:
+      Leaf: 'Big Basket'
+    if has_beverages == 1:
+      Leaf: 'Big Basket'
+  if has_dairy == 1:
+    if has_fruits == 0:
+      Leaf: 'Big Basket'
+    if has_fruits == 1:
+      Leaf: 'Big Basket'

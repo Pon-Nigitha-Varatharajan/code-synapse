@@ -1,8 +1,8 @@
 {
   "['citrus fruit', 'semi-finished bread', 'margarine', 'ready soups']": [
-    "tropical fruit",
     "whole milk",
     "yogurt",
+    "tropical fruit",
     "other vegetables",
     "rolls/buns"
   ],
@@ -114,8 +114,8 @@
   "['fruit/vegetable juice']": [
     "soda",
     "other vegetables",
-    "whole milk",
     "rolls/buns",
+    "whole milk",
     "yogurt"
   ],
   "['packaged fruit/vegetables']": [
@@ -127,8 +127,8 @@
   ],
   "['chocolate']": [
     "other vegetables",
-    "rolls/buns",
     "soda",
+    "rolls/buns",
     "whole milk",
     "yogurt"
   ],
@@ -190,8 +190,8 @@
   ],
   "['brown bread', 'soda', 'fruit/vegetable juice', 'canned beer', 'newspapers', 'shopping bags']": [
     "rolls/buns",
-    "whole milk",
     "yogurt",
+    "whole milk",
     "other vegetables",
     "bottled water"
   ],
@@ -252,11 +252,11 @@
     "soda"
   ],
   "['citrus fruit', 'zwieback', 'newspapers']": [
-    "tropical fruit",
     "whole milk",
     "yogurt",
+    "tropical fruit",
     "rolls/buns",
-    "root vegetables"
+    "other vegetables"
   ],
   "['sausage', 'rolls/buns', 'soda', 'canned beer', 'specialty bar', 'shopping bags']": [
     "other vegetables",
@@ -350,8 +350,8 @@
     "root vegetables"
   ],
   "['packaged fruit/vegetables', 'brown bread', 'canned beer']": [
-    "whole milk",
     "yogurt",
+    "whole milk",
     "other vegetables",
     "rolls/buns",
     "soda"
@@ -450,8 +450,8 @@
   "['whole milk', 'butter', 'margarine', 'specialty fat', 'specialty chocolate', 'candles', 'flower (seeds)']": [
     "other vegetables",
     "yogurt",
-    "root vegetables",
     "rolls/buns",
+    "root vegetables",
     "soda"
   ],
   "['frankfurter', 'citrus fruit', 'whole milk', 'domestic eggs', 'oil', 'sparkling wine', 'specialty chocolate', 'newspapers']": [
@@ -567,8 +567,8 @@
     "yogurt"
   ],
   "['berries']": [
-    "other vegetables",
     "whole milk",
+    "other vegetables",
     "yogurt",
     "whipped/sour cream",
     "soda"
@@ -584,15 +584,15 @@
     "tropical fruit",
     "whole milk",
     "rolls/buns",
-    "root vegetables",
-    "other vegetables"
+    "other vegetables",
+    "root vegetables"
   ],
   "['pork', 'hamburger meat', 'citrus fruit', 'berries', 'onions', 'whipped/sour cream', 'rice', 'coffee', 'chocolate']": [
     "other vegetables",
-    "tropical fruit",
     "whole milk",
     "yogurt",
-    "rolls/buns"
+    "tropical fruit",
+    "soda"
   ],
   "['detergent']": [
     "whole milk",

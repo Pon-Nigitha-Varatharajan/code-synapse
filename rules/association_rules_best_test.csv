@@ -1,0 +1,274 @@
+rule,train_confidence,test_confidence,support,lift
+['brown bread'] -> ['whole milk'],0.4058,0.349,0.0263,1.5599
+['tropical fruit'] -> ['whole milk'],0.4014,0.4072,0.0423,1.5428
+['onions'] -> ['other vegetables'],0.4428,0.4904,0.0129,2.2987
+['meat'] -> ['whole milk'],0.4254,0.2877,0.0112,1.6351
+['sugar'] -> ['whole milk'],0.4454,0.4423,0.0148,1.712
+['yogurt'] -> ['whole milk'],0.4023,0.4,0.0568,1.5462
+['pork'] -> ['whole milk'],0.4036,0.3443,0.0225,1.5515
+['pickled vegetables'] -> ['whole milk'],0.4065,0.3774,0.0073,1.5625
+['butter'] -> ['whole milk'],0.5052,0.4785,0.028,1.942
+['herbs'] -> ['root vegetables'],0.4167,0.475,0.0073,3.8657
+['chicken'] -> ['other vegetables'],0.4207,0.4091,0.0177,2.184
+['herbs'] -> ['other vegetables'],0.4833,0.45,0.0084,2.5093
+['root vegetables'] -> ['other vegetables'],0.4205,0.4667,0.0453,2.183
+['root vegetables'] -> ['whole milk'],0.4542,0.4364,0.049,1.7457
+['margarine'] -> ['whole milk'],0.4248,0.3822,0.0259,1.6329
+['cake bar'] -> ['whole milk'],0.4565,0.3421,0.0061,1.7547
+['domestic eggs'] -> ['whole milk'],0.4523,0.5217,0.0289,1.7384
+['flour'] -> ['whole milk'],0.4878,0.4792,0.0087,1.875
+['whipped/sour cream'] -> ['whole milk'],0.4588,0.4292,0.0324,1.7637
+['cream cheese'] -> ['whole milk'],0.4173,0.4113,0.0161,1.6039
+['processed cheese'] -> ['whole milk'],0.4174,0.4375,0.007,1.6043
+['ham'] -> ['whole milk'],0.4432,0.4366,0.0119,1.7037
+['beef'] -> ['whole milk'],0.4282,0.354,0.0221,1.6457
+['semi-finished bread'] -> ['whole milk'],0.4359,0.3333,0.0074,1.6754
+['hamburger meat'] -> ['other vegetables'],0.4025,0.4505,0.0138,2.0898
+['curd'] -> ['whole milk'],0.4919,0.487,0.0264,1.8907
+['soft cheese'] -> ['whole milk'],0.4237,0.48,0.0073,1.6287
+['frozen fish'] -> ['whole milk'],0.4405,0.3871,0.0054,1.693
+['frozen vegetables'] -> ['whole milk'],0.465,0.3333,0.0222,1.7875
+['chicken'] -> ['whole milk'],0.4241,0.3788,0.0179,1.6302
+['hard cheese'] -> ['whole milk'],0.4186,0.3913,0.0105,1.609
+['sliced cheese'] -> ['whole milk'],0.4731,0.3649,0.0115,1.8183
+['mustard'] -> ['whole milk'],0.4362,0.4167,0.006,1.6765
+['baking powder'] -> ['whole milk'],0.5323,0.5,0.0096,2.0458
+['detergent'] -> ['whole milk'],0.469,0.4545,0.0099,1.8025
+['potted plants'] -> ['whole milk'],0.4123,0.375,0.0068,1.5847
+['hamburger meat'] -> ['whole milk'],0.4492,0.4286,0.0154,1.7264
+['butter milk'] -> ['whole milk'],0.4444,0.3488,0.0122,1.7083
+['roll products'] -> ['other vegetables'],0.4737,0.44,0.0052,2.4592
+['herbs'] -> ['whole milk'],0.45,0.55,0.0078,1.7296
+"['citrus fruit', 'rolls/buns'] -> ['whole milk']",0.4286,0.434,0.007,1.6473
+"['tropical fruit', 'brown bread'] -> ['whole milk']",0.5541,0.4839,0.006,2.1296
+"['brown bread', 'rolls/buns'] -> ['whole milk']",0.4353,0.3846,0.0054,1.6731
+"['citrus fruit', 'tropical fruit'] -> ['whole milk']",0.4643,0.4286,0.0094,1.7846
+"['tropical fruit', 'rolls/buns'] -> ['whole milk']",0.4451,0.4493,0.0112,1.7108
+"['white bread', 'other vegetables'] -> ['whole milk']",0.4167,0.4615,0.0058,1.6015
+"['tropical fruit', 'bottled water'] -> ['yogurt']",0.4141,0.3148,0.0077,2.9325
+"['newspapers', 'tropical fruit'] -> ['whole milk']",0.439,0.4118,0.0052,1.6875
+"['citrus fruit', 'bottled water'] -> ['whole milk']",0.404,0.5294,0.0058,1.553
+"['tropical fruit', 'bottled water'] -> ['whole milk']",0.4531,0.3889,0.0084,1.7417
+"['fruit/vegetable juice', 'bottled water'] -> ['whole milk']",0.4206,0.3636,0.0065,1.6165
+"['fruit/vegetable juice', 'whole milk'] -> ['other vegetables']",0.4041,0.3623,0.0113,2.0981
+"['fruit/vegetable juice', 'other vegetables'] -> ['whole milk']",0.5166,0.4464,0.0113,1.9855
+"['coffee', 'other vegetables'] -> ['whole milk']",0.5333,0.3571,0.007,2.05
+"['sugar', 'whole milk'] -> ['other vegetables']",0.4118,0.4348,0.0061,2.1377
+"['sugar', 'other vegetables'] -> ['whole milk']",0.5753,0.6061,0.0061,2.2114
+"['other vegetables', 'bottled water'] -> ['whole milk']",0.4302,0.4444,0.0107,1.6537
+"['rolls/buns', 'other vegetables'] -> ['whole milk']",0.4246,0.4104,0.0176,1.6319
+"['pork', 'rolls/buns'] -> ['whole milk']",0.5921,0.4571,0.0065,2.2759
+"['yogurt', 'rolls/buns'] -> ['whole milk']",0.4481,0.4639,0.0157,1.7225
+"['yogurt', 'butter'] -> ['whole milk']",0.6078,0.7143,0.009,2.3363
+"['yogurt', 'sausage'] -> ['whole milk']",0.4714,0.3774,0.0096,1.812
+"['yogurt', 'pip fruit'] -> ['whole milk']",0.4961,0.625,0.0093,1.9069
+"['pip fruit', 'sausage'] -> ['whole milk']",0.5,0.5769,0.0058,1.9218
+"['shopping bags', 'root vegetables'] -> ['other vegetables']",0.5116,0.525,0.0064,2.6561
+"['chicken', 'root vegetables'] -> ['other vegetables']",0.5263,0.5161,0.0058,2.7324
+"['yogurt', 'root vegetables'] -> ['whole milk']",0.5549,0.5802,0.0139,2.1329
+"['shopping bags', 'pastry'] -> ['whole milk']",0.4111,0.2963,0.0054,1.5802
+"['napkins', 'tropical fruit'] -> ['whole milk']",0.5217,0.4333,0.0052,2.0054
+"['yogurt', 'domestic eggs'] -> ['whole milk']",0.5327,0.5588,0.0083,2.0476
+"['domestic eggs', 'tropical fruit'] -> ['whole milk']",0.5882,0.6667,0.0073,2.261
+"['tropical fruit', 'pastry'] -> ['whole milk']",0.5281,0.4634,0.0068,2.0298
+"['domestic eggs', 'margarine'] -> ['whole milk']",0.623,0.619,0.0055,2.3944
+"['yogurt', 'margarine'] -> ['whole milk']",0.4949,0.4878,0.0071,1.9024
+"['yogurt', 'pastry'] -> ['whole milk']",0.5,0.5789,0.0099,1.9218
+"['domestic eggs', 'pip fruit'] -> ['whole milk']",0.5932,0.6923,0.0051,2.2801
+"['shopping bags', 'tropical fruit'] -> ['whole milk']",0.4227,0.2222,0.006,1.6246
+"['pip fruit', 'pastry'] -> ['whole milk']",0.5063,0.3846,0.0058,1.9462
+"['napkins', 'yogurt'] -> ['whole milk']",0.4831,0.5312,0.0062,1.8571
+"['yogurt', 'tropical fruit'] -> ['whole milk']",0.4951,0.5732,0.0148,1.9032
+"['soda', 'whipped/sour cream'] -> ['whole milk']",0.4872,0.4444,0.0055,1.8726
+"['domestic eggs', 'whipped/sour cream'] -> ['whole milk']",0.5915,0.5185,0.0061,2.2737
+"['tropical fruit', 'whipped/sour cream'] -> ['yogurt']",0.4444,0.4565,0.0058,3.1477
+"['soda', 'domestic eggs'] -> ['whole milk']",0.4105,0.4444,0.0057,1.5779
+"['yogurt', 'frankfurter'] -> ['whole milk']",0.5753,0.5135,0.0061,2.2114
+"['yogurt', 'whipped/sour cream'] -> ['whole milk']",0.5352,0.5,0.011,2.0572
+"['tropical fruit', 'whipped/sour cream'] -> ['whole milk']",0.5667,0.587,0.0074,2.1781
+"['yogurt', 'other vegetables'] -> ['whole milk']",0.5201,0.4961,0.0225,1.9992
+"['whole milk', 'berries'] -> ['other vegetables']",0.4167,0.4375,0.0051,2.1631
+"['other vegetables', 'berries'] -> ['whole milk']",0.473,0.5185,0.0051,1.8179
+"['whole milk', 'butter'] -> ['other vegetables']",0.4301,0.3846,0.0121,2.2326
+"['butter', 'other vegetables'] -> ['whole milk']",0.5724,0.5769,0.0121,2.2002
+"['yogurt', 'butter'] -> ['other vegetables']",0.4412,0.4286,0.0065,2.2904
+"['yogurt', 'margarine'] -> ['other vegetables']",0.404,0.3902,0.0058,2.0976
+"['margarine', 'whole milk'] -> ['other vegetables']",0.4157,0.2833,0.0107,2.1583
+"['margarine', 'other vegetables'] -> ['whole milk']",0.5211,0.3269,0.0107,2.003
+"['yogurt', 'brown bread'] -> ['whole milk']",0.52,0.4186,0.0076,1.9987
+"['yogurt', 'newspapers'] -> ['whole milk']",0.4037,0.5,0.0064,1.5516
+"['newspapers', 'other vegetables'] -> ['whole milk']",0.4388,0.4118,0.0089,1.6868
+"['yogurt', 'beef'] -> ['whole milk']",0.5195,0.5263,0.0058,1.9967
+"['brown bread', 'other vegetables'] -> ['whole milk']",0.4621,0.5962,0.0089,1.7762
+"['beef', 'whole milk'] -> ['other vegetables']",0.4342,0.4386,0.0096,2.2542
+"['beef', 'other vegetables'] -> ['whole milk']",0.5077,0.3906,0.0096,1.9514
+"['pork', 'rolls/buns'] -> ['other vegetables']",0.5,0.4857,0.0055,2.5958
+"['whole milk', 'pork'] -> ['other vegetables']",0.4452,0.4921,0.01,2.3111
+"['pork', 'other vegetables'] -> ['whole milk']",0.4894,0.4306,0.01,1.8809
+"['frankfurter', 'other vegetables'] -> ['whole milk']",0.463,0.463,0.0073,1.7795
+"['tropical fruit', 'other vegetables'] -> ['whole milk']",0.4545,0.5225,0.016,1.7471
+"['beef', 'rolls/buns'] -> ['whole milk']",0.4792,0.5526,0.0067,1.8418
+"['yogurt', 'pork'] -> ['other vegetables']",0.5224,0.4074,0.0051,2.712
+"['soda', 'other vegetables'] -> ['whole milk']",0.4435,0.3804,0.0148,1.7046
+"['domestic eggs', 'rolls/buns'] -> ['whole milk']",0.4286,0.4048,0.007,1.6473
+"['root vegetables', 'bottled water'] -> ['other vegetables']",0.4336,0.4878,0.0071,2.2512
+"['soda', 'root vegetables'] -> ['other vegetables']",0.4593,0.3958,0.009,2.3843
+"['tropical fruit', 'root vegetables'] -> ['other vegetables']",0.5493,0.6615,0.0113,2.8517
+"['soda', 'root vegetables'] -> ['whole milk']",0.4519,0.3958,0.0089,1.7368
+"['other vegetables', 'cream cheese'] -> ['whole milk']",0.407,0.6327,0.0051,1.5643
+"['napkins', 'other vegetables'] -> ['whole milk']",0.5155,0.3778,0.0073,1.9813
+"['whole milk', 'root vegetables'] -> ['other vegetables']",0.4659,0.4931,0.0228,2.4186
+"['other vegetables', 'root vegetables'] -> ['whole milk']",0.5032,0.461,0.0228,1.9342
+"['napkins', 'root vegetables'] -> ['whole milk']",0.5373,0.3871,0.0052,2.0653
+"['tropical fruit', 'root vegetables'] -> ['whole milk']",0.5493,0.6154,0.0113,2.1113
+"['curd', 'root vegetables'] -> ['whole milk']",0.589,0.5294,0.0062,2.2641
+"['citrus fruit', 'root vegetables'] -> ['whole milk']",0.5508,0.4464,0.0094,2.1173
+"['citrus fruit', 'pip fruit'] -> ['tropical fruit']",0.4082,0.3947,0.0058,3.8756
+"['rolls/buns', 'root vegetables'] -> ['whole milk']",0.5562,0.4429,0.0137,2.1379
+"['newspapers', 'root vegetables'] -> ['whole milk']",0.5325,0.4444,0.006,2.0466
+"['yogurt', 'curd'] -> ['whole milk']",0.5798,0.5882,0.01,2.2287
+"['root vegetables', 'whipped/sour cream'] -> ['whole milk']",0.5812,0.4902,0.0099,2.2339
+"['rolls/buns', 'whipped/sour cream'] -> ['whole milk']",0.5556,0.4889,0.008,2.1354
+"['rolls/buns', 'curd'] -> ['whole milk']",0.5833,0.5926,0.0061,2.2421
+"['curd', 'whipped/sour cream'] -> ['whole milk']",0.5758,0.5405,0.0055,2.213
+"['yogurt', 'cream cheese'] -> ['whole milk']",0.5476,0.5,0.0067,2.1049
+"['whole milk', 'cream cheese'] -> ['yogurt']",0.4144,0.3725,0.0067,2.935
+"['whole milk', 'waffles'] -> ['rolls/buns']",0.4149,0.2258,0.0057,2.2366
+"['rolls/buns', 'waffles'] -> ['whole milk']",0.5417,0.3889,0.0057,2.082
+"['margarine', 'root vegetables'] -> ['other vegetables']",0.519,0.5667,0.006,2.6944
+"['butter', 'root vegetables'] -> ['other vegetables']",0.5444,0.4324,0.0071,2.8265
+"['pip fruit', 'root vegetables'] -> ['other vegetables']",0.5146,0.54,0.0077,2.6714
+"['butter', 'whipped/sour cream'] -> ['other vegetables']",0.5769,0.5455,0.0065,2.9951
+"['pip fruit', 'whipped/sour cream'] -> ['other vegetables']",0.5645,0.6897,0.0051,2.9307
+"['tropical fruit', 'whipped/sour cream'] -> ['other vegetables']",0.5222,0.6522,0.0068,2.7111
+"['fruit/vegetable juice', 'root vegetables'] -> ['other vegetables']",0.5122,0.6389,0.0061,2.6591
+"['butter', 'bottled water'] -> ['whole milk']",0.6061,0.5909,0.0058,2.3295
+"['yogurt', 'frozen vegetables'] -> ['other vegetables']",0.4568,0.3659,0.0054,2.3715
+"['fruit/vegetable juice', 'yogurt'] -> ['other vegetables']",0.447,0.4231,0.0086,2.3205
+"['yogurt', 'whipped/sour cream'] -> ['other vegetables']",0.4648,0.5484,0.0096,2.413
+"['domestic eggs', 'whole milk'] -> ['other vegetables']",0.4221,0.3854,0.0122,2.1914
+"['domestic eggs', 'other vegetables'] -> ['whole milk']",0.5283,0.6167,0.0122,2.0306
+"['domestic eggs', 'butter'] -> ['other vegetables']",0.4861,0.4348,0.0051,2.5237
+"['yogurt', 'pip fruit'] -> ['other vegetables']",0.4419,0.4792,0.0083,2.2939
+"['fruit/vegetable juice', 'root vegetables'] -> ['whole milk']",0.5732,0.4722,0.0068,2.2031
+"['chicken', 'root vegetables'] -> ['whole milk']",0.5658,0.5161,0.0062,2.1747
+"['frozen vegetables', 'root vegetables'] -> ['whole milk']",0.5946,0.425,0.0064,2.2854
+"['whole milk', 'pip fruit'] -> ['other vegetables']",0.4221,0.5052,0.0122,2.1914
+"['pip fruit', 'other vegetables'] -> ['whole milk']",0.4941,0.5632,0.0122,1.8992
+"['fruit/vegetable juice', 'yogurt'] -> ['whole milk']",0.4848,0.5577,0.0093,1.8636
+"['chicken', 'whole milk'] -> ['other vegetables']",0.5041,0.42,0.009,2.6169
+"['chicken', 'other vegetables'] -> ['whole milk']",0.5082,0.3889,0.009,1.9533
+"['butter', 'whipped/sour cream'] -> ['whole milk']",0.6795,0.5909,0.0077,2.6117
+"['pip fruit', 'whipped/sour cream'] -> ['whole milk']",0.6774,0.5862,0.0061,2.6038
+"['frozen vegetables', 'whole milk'] -> ['other vegetables']",0.4641,0.5,0.0103,2.4092
+"['frozen vegetables', 'other vegetables'] -> ['whole milk']",0.5917,0.4364,0.0103,2.2742
+"['pip fruit', 'root vegetables'] -> ['whole milk']",0.5534,0.62,0.0083,2.1271
+"['bottled water', 'root vegetables'] -> ['whole milk']",0.469,0.4634,0.0077,1.8028
+"['yogurt', 'chicken'] -> ['other vegetables']",0.5902,0.5714,0.0052,3.0639
+"['fruit/vegetable juice', 'domestic eggs'] -> ['whole milk']",0.5902,0.6111,0.0052,2.2684
+"['yogurt', 'bottled water'] -> ['whole milk']",0.4259,0.4062,0.01,1.6371
+"['butter', 'root vegetables'] -> ['whole milk']",0.6778,0.5405,0.0089,2.6051
+"['fruit/vegetable juice', 'tropical fruit'] -> ['whole milk']",0.4211,0.475,0.0058,1.6184
+"['frozen vegetables', 'root vegetables'] -> ['other vegetables']",0.527,0.525,0.0057,2.7361
+"['butter', 'tropical fruit'] -> ['other vegetables']",0.5469,0.5588,0.0051,2.8391
+"['domestic eggs', 'root vegetables'] -> ['whole milk']",0.6064,0.5745,0.0083,2.3307
+"['root vegetables', 'whipped/sour cream'] -> ['other vegetables']",0.453,0.6078,0.0077,2.3517
+"['tropical fruit', 'pip fruit'] -> ['other vegetables']",0.4255,0.55,0.0087,2.2092
+"['whole milk', 'whipped/sour cream'] -> ['other vegetables']",0.426,0.5213,0.0138,2.2116
+"['other vegetables', 'whipped/sour cream'] -> ['whole milk']",0.5053,0.5104,0.0138,1.9423
+"['domestic eggs', 'root vegetables'] -> ['other vegetables']",0.5426,0.4468,0.0074,2.8167
+"['butter', 'tropical fruit'] -> ['whole milk']",0.6406,0.5882,0.006,2.4623
+"['other vegetables', 'long life bakery product'] -> ['whole milk']",0.5455,0.5128,0.0052,2.0965
+"['fruit/vegetable juice', 'tropical fruit'] -> ['other vegetables']",0.4632,0.525,0.0064,2.4045
+"['yogurt', 'frozen vegetables'] -> ['whole milk']",0.5432,0.3902,0.0064,2.0879
+"['yogurt', 'root vegetables'] -> ['other vegetables']",0.4624,0.5802,0.0116,2.4007
+"['domestic eggs', 'butter'] -> ['whole milk']",0.625,0.6087,0.0065,2.4023
+"['rolls/buns', 'root vegetables'] -> ['other vegetables']",0.497,0.5143,0.0122,2.5804
+"['citrus fruit', 'root vegetables'] -> ['other vegetables']",0.5339,0.6964,0.0092,2.7718
+"['newspapers', 'root vegetables'] -> ['other vegetables']",0.5325,0.5,0.006,2.7643
+"['citrus fruit', 'whole milk'] -> ['other vegetables']",0.4091,0.475,0.0131,2.1238
+"['citrus fruit', 'other vegetables'] -> ['whole milk']",0.4523,0.4471,0.0131,1.7383
+"['bottled beer', 'rolls/buns'] -> ['whole milk']",0.4091,0.3696,0.0052,1.5724
+"['bottled beer', 'other vegetables'] -> ['whole milk']",0.4786,0.4524,0.0081,1.8397
+"['whole milk', 'onions'] -> ['other vegetables']",0.519,0.6,0.006,2.6944
+"['onions', 'other vegetables'] -> ['whole milk']",0.4607,0.4706,0.006,1.7707
+"['onions', 'other vegetables'] -> ['root vegetables']",0.4157,0.3725,0.0054,3.857
+"['onions', 'root vegetables'] -> ['other vegetables']",0.6167,0.5758,0.0054,3.2015
+"['margarine', 'bottled water'] -> ['whole milk']",0.4861,0.4828,0.0051,1.8684
+"['chocolate', 'rolls/buns'] -> ['whole milk']",0.4157,0.4444,0.0054,1.5979
+"['napkins', 'rolls/buns'] -> ['whole milk']",0.4744,0.4054,0.0054,1.8233
+"['soda', 'domestic eggs'] -> ['other vegetables']",0.4105,0.4074,0.0057,2.1313
+"['rolls/buns', 'whipped/sour cream'] -> ['other vegetables']",0.4343,0.5111,0.0062,2.2549
+"['root vegetables', 'pastry'] -> ['other vegetables']",0.4615,0.7333,0.0052,2.3961
+"['root vegetables', 'pastry'] -> ['whole milk']",0.5128,0.5333,0.0058,1.9711
+"['pork', 'root vegetables'] -> ['other vegetables']",0.5158,0.5128,0.0071,2.6777
+"['other vegetables', 'pastry'] -> ['whole milk']",0.4906,0.4127,0.0113,1.8856
+"['pork', 'root vegetables'] -> ['whole milk']",0.5368,0.4103,0.0074,2.0634
+"['soda', 'pastry'] -> ['whole milk']",0.4225,0.3231,0.0087,1.6241
+"['butter', 'rolls/buns'] -> ['whole milk']",0.4687,0.5556,0.0065,1.8017
+"['butter', 'rolls/buns'] -> ['other vegetables']",0.4583,0.3333,0.0064,2.3795
+"['tropical fruit', 'sausage'] -> ['other vegetables']",0.4062,0.4878,0.0057,2.1091
+"['tropical fruit', 'sausage'] -> ['whole milk']",0.5208,0.5122,0.0073,2.0019
+"['other vegetables', 'sausage'] -> ['whole milk']",0.4064,0.3077,0.011,1.5621
+"['yogurt', 'citrus fruit'] -> ['whole milk']",0.474,0.4746,0.0106,1.822
+"['citrus fruit', 'tropical fruit'] -> ['other vegetables']",0.4214,0.5357,0.0086,2.1879
+"['brown bread', 'pastry'] -> ['whole milk']",0.5072,0.4615,0.0051,1.9497
+"['citrus fruit', 'sausage'] -> ['whole milk']",0.4557,0.4062,0.0052,1.7515
+"['margarine', 'rolls/buns'] -> ['whole milk']",0.5327,0.5526,0.0083,2.0476
+"['chicken', 'rolls/buns'] -> ['whole milk']",0.5429,0.56,0.0055,2.0866
+"['hygiene articles', 'whole milk'] -> ['other vegetables']",0.4333,0.3333,0.0057,2.2497
+"['hygiene articles', 'other vegetables'] -> ['whole milk']",0.5652,0.48,0.0057,2.1725
+"['margarine', 'root vegetables'] -> ['whole milk']",0.4557,0.4333,0.0052,1.7515
+"['whipped/sour cream', 'sausage'] -> ['whole milk']",0.5714,0.5263,0.0058,2.1964
+"['whipped/sour cream', 'sausage'] -> ['other vegetables']",0.5429,0.5263,0.0055,2.8183
+"['curd', 'pastry'] -> ['whole milk']",0.6667,0.3529,0.0055,2.5624
+"['brown bread', 'sausage'] -> ['whole milk']",0.4684,0.2692,0.0054,1.8002
+"['root vegetables', 'sausage'] -> ['whole milk']",0.5556,0.4103,0.0087,2.1354
+"['brown bread', 'root vegetables'] -> ['whole milk']",0.5429,0.6,0.0055,2.0866
+"['soda', 'sausage'] -> ['rolls/buns']",0.4094,0.3676,0.0102,2.2067
+"['fruit/vegetable juice', 'sausage'] -> ['whole milk']",0.5147,0.4194,0.0051,1.9784
+"['beef', 'whole milk'] -> ['root vegetables']",0.4013,0.3158,0.0089,3.7233
+"['beef', 'root vegetables'] -> ['whole milk']",0.5169,0.3396,0.0089,1.987
+"['tropical fruit', 'curd'] -> ['whole milk']",0.5758,0.7429,0.0055,2.213
+"['curd', 'other vegetables'] -> ['whole milk']",0.6174,0.4815,0.0103,2.373
+"['hamburger meat', 'whole milk'] -> ['other vegetables']",0.4057,0.4872,0.0062,2.106
+"['hamburger meat', 'other vegetables'] -> ['whole milk']",0.4526,0.4634,0.0062,1.7398
+"['rolls/buns', 'pip fruit'] -> ['whole milk']",0.48,0.3514,0.007,1.845
+"['curd', 'root vegetables'] -> ['other vegetables']",0.4795,0.5588,0.0051,2.4891
+"['tropical fruit', 'pastry'] -> ['other vegetables']",0.4045,0.3415,0.0052,2.1
+"['citrus fruit', 'whipped/sour cream'] -> ['other vegetables']",0.5067,0.5625,0.0055,2.6304
+"['pip fruit', 'pastry'] -> ['other vegetables']",0.4557,0.3846,0.0052,2.3658
+"['citrus fruit', 'whipped/sour cream'] -> ['whole milk']",0.56,0.625,0.0061,2.1525
+"['sausage', 'pastry'] -> ['whole milk']",0.506,0.35,0.0061,1.945
+"['yogurt', 'cream cheese'] -> ['other vegetables']",0.4286,0.4211,0.0052,2.225
+"['other vegetables', 'cream cheese'] -> ['yogurt']",0.4186,0.3265,0.0052,2.9647
+"['root vegetables', 'sausage'] -> ['other vegetables']",0.463,0.4359,0.0073,2.4035
+"['chocolate', 'other vegetables'] -> ['whole milk']",0.4524,0.3902,0.0055,1.7388
+"['citrus fruit', 'domestic eggs'] -> ['whole milk']",0.5224,0.6,0.0051,2.0079
+"['chicken', 'rolls/buns'] -> ['other vegetables']",0.5286,0.48,0.0054,2.7441
+"['beef', 'other vegetables'] -> ['root vegetables']",0.4154,0.375,0.0078,3.8538
+"['beef', 'root vegetables'] -> ['other vegetables']",0.4576,0.4528,0.0078,2.3758
+"['butter', 'curd'] -> ['whole milk']",0.7292,0.6842,0.0051,2.8027
+"['yogurt', 'rolls/buns', 'other vegetables'] -> ['whole milk']",0.527,0.5128,0.0057,2.0257
+"['yogurt', 'whole milk', 'tropical fruit'] -> ['other vegetables']",0.4608,0.5957,0.0068,2.3922
+"['yogurt', 'tropical fruit', 'other vegetables'] -> ['whole milk']",0.5802,0.7,0.0068,2.2303
+"['whole milk', 'tropical fruit', 'other vegetables'] -> ['yogurt']",0.4273,0.4828,0.0068,3.0261
+"['soda', 'whole milk', 'root vegetables'] -> ['other vegetables']",0.6066,0.3684,0.0054,3.149
+"['soda', 'root vegetables', 'other vegetables'] -> ['whole milk']",0.5968,0.3684,0.0054,2.2938
+"['whole milk', 'tropical fruit', 'root vegetables'] -> ['other vegetables']",0.5769,0.6,0.0065,2.9951
+"['tropical fruit', 'root vegetables', 'other vegetables'] -> ['whole milk']",0.5769,0.5581,0.0065,2.2175
+"['whole milk', 'tropical fruit', 'other vegetables'] -> ['root vegetables']",0.4091,0.4138,0.0065,3.7954
+"['yogurt', 'whole milk', 'root vegetables'] -> ['other vegetables']",0.4896,0.6383,0.0068,2.5417
+"['yogurt', 'root vegetables', 'other vegetables'] -> ['whole milk']",0.5875,0.6383,0.0068,2.2582
+"['fruit/vegetable juice', 'yogurt', 'whole milk'] -> ['other vegetables']",0.5938,0.4138,0.0055,3.0825
+"['fruit/vegetable juice', 'yogurt', 'other vegetables'] -> ['whole milk']",0.6441,0.5455,0.0055,2.4756
+"['fruit/vegetable juice', 'whole milk', 'other vegetables'] -> ['yogurt']",0.4872,0.48,0.0055,3.4504
+"['yogurt', 'whole milk', 'whipped/sour cream'] -> ['other vegetables']",0.5,0.5484,0.0055,2.5958
+"['yogurt', 'other vegetables', 'whipped/sour cream'] -> ['whole milk']",0.5758,0.5,0.0055,2.213
+"['rolls/buns', 'whole milk', 'root vegetables'] -> ['other vegetables']",0.4787,0.5161,0.0065,2.4853
+"['rolls/buns', 'root vegetables', 'other vegetables'] -> ['whole milk']",0.5357,0.4444,0.0065,2.0591
+"['citrus fruit', 'whole milk', 'root vegetables'] -> ['other vegetables']",0.6154,0.68,0.0058,3.1948
+"['citrus fruit', 'root vegetables', 'other vegetables'] -> ['whole milk']",0.6349,0.4359,0.0058,2.4404
+"['citrus fruit', 'whole milk', 'other vegetables'] -> ['root vegetables']",0.4444,0.4474,0.0058,4.1234
+"['citrus fruit', 'whole milk', 'tropical fruit'] -> ['other vegetables']",0.5385,0.5833,0.0051,2.7955
+"['citrus fruit', 'tropical fruit', 'other vegetables'] -> ['whole milk']",0.5932,0.4667,0.0051,2.2801

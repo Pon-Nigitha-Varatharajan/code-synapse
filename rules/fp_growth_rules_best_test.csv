@@ -1,0 +1,4 @@
+rule,train_confidence,test_confidence,support,lift
+['frozen vegetables'] -> ['whole milk'],0.4255,0.3333,0.0203,1.6356
+['curd'] -> ['whole milk'],0.4432,0.487,0.0238,1.7037
+['butter'] -> ['whole milk'],0.4581,0.4785,0.0254,1.7608
