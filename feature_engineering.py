@@ -1,69 +1,64 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Feature Engineering for Groceries Dataset
+Feature Engineering for Groceries Dataset (Train/Test)
 """
 
-import pandas as pd
 import os
 import json
+import pandas as pd
 from collections import Counter
 
 # ------------------------------
-# 1. Load Cleaned Data
+# 1. Load Train/Test Data
 # ------------------------------
-with open("clean/groceries_baskets.json", "r") as f:
-    transactions = json.load(f)
+with open("clean/groceries_train.json", "r") as f:
+    train_tx = json.load(f)
 
-print(f"✅ Loaded {len(transactions)} transactions")
+with open("clean/groceries_test.json", "r") as f:
+    test_tx = json.load(f)
 
-# ------------------------------
-# 2. Basket-Level Features
-# ------------------------------
-
-# Create basket DataFrame
-basket_df = pd.DataFrame({"basket": transactions})
-
-# Basket size
-basket_df["basket_size"] = basket_df["basket"].apply(lambda x: len([i for i in x if i != ""]))
-
-print("\n🔎 Example Basket Features:")
-print(basket_df.head(3))
+print(f"✅ Train: {len(train_tx)} baskets, Test: {len(test_tx)} baskets")
 
 # ------------------------------
-# 3. Item-Level Popularity Features
+# 2. Build Top Items from Train
 # ------------------------------
-
-# Flatten items and count frequency
-all_items = [item for basket in transactions for item in basket if item != ""]
-item_counts = Counter(all_items)
-top_items = [item for item, count in item_counts.most_common(500)]  # top 500 items
-
-# Keep only top items in baskets
-basket_df["basket_top_items"] = basket_df["basket"].apply(lambda x: [i for i in x if i in top_items])
-
-print("\n✅ Top items filtered in baskets")
+all_train_items = [item for basket in train_tx for item in basket if item != ""]
+train_item_counts = Counter(all_train_items)
+top_items = [item for item, _ in train_item_counts.most_common(500)]  # top 500 items
+print(f"✅ Top 500 items selected from Train set")
 
 # ------------------------------
-# 4. Transaction-Level Features
+# 3. Feature Engineering Function
 # ------------------------------
-
-# Presence matrix for top items (sparse)
-top_item_df = pd.DataFrame(
-    [{item: int(item in basket) for item in top_items} for basket in basket_df["basket_top_items"]]
-)
-
-print(f"\n🔎 Top item presence matrix shape: {top_item_df.shape}")
+def build_features(transactions, top_items):
+    basket_df = pd.DataFrame({"basket": transactions})
+    # Basket size
+    basket_df["basket_size"] = basket_df["basket"].apply(lambda x: len([i for i in x if i != ""]))
+    # Keep only top items
+    basket_df["basket_top_items"] = basket_df["basket"].apply(lambda x: [i for i in x if i in top_items])
+    # Presence matrix (sparse)
+    top_item_df = pd.DataFrame([{item: int(item in basket) for item in top_items} for basket in basket_df["basket_top_items"]])
+    return basket_df, top_item_df
 
 # ------------------------------
-# 5. Save Feature Files
+# 4. Build Features for Train and Test
+# ------------------------------
+train_basket_df, train_item_matrix = build_features(train_tx, top_items)
+test_basket_df, test_item_matrix = build_features(test_tx, top_items)
+
+print(f"\n🔎 Train matrix shape: {train_item_matrix.shape}")
+print(f"🔎 Test matrix shape : {test_item_matrix.shape}")
+
+# ------------------------------
+# 5. Save Features
 # ------------------------------
 os.makedirs("features", exist_ok=True)
 
-# Save baskets with features
-basket_df.to_json("features/groceries_baskets_features.json", orient="records", lines=True)
-top_item_df.to_csv("features/groceries_top_items_matrix.csv", index=False)
+train_basket_df.to_json("features/train_baskets_features.json", orient="records", lines=True)
+train_item_matrix.to_csv("features/train_top_items_matrix.csv", index=False)
 
-print("\n✅ Features saved:")
-print(" - 'features/groceries_baskets_features.json'")
-print(" - 'features/groceries_top_items_matrix.csv'")
+test_basket_df.to_json("features/test_baskets_features.json", orient="records", lines=True)
+test_item_matrix.to_csv("features/test_top_items_matrix.csv", index=False)
+
+print("\n✅ Feature files saved in 'features/' folder")

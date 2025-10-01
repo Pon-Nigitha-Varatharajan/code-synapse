@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Data Preprocessing for Groceries Dataset
+Data Preprocessing for Groceries Dataset with Train/Test Split
 """
 
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+import json
 
 # ------------------------------
 # 1. Load Data
@@ -30,22 +32,20 @@ print(groceries.head())
 # 3. Null Value Check & Handling
 # ------------------------------
 print("\n🔎 Null Value Check (from ragged baskets):")
-print(groceries.isnull().sum().head())  # only sample output
+print(groceries.isnull().sum())  # only sample output
 
 # Fill NaN with empty string
 groceries = groceries.fillna("")
-
 print("✅ Missing values handled")
 
 # ------------------------------
-# 4. Duplicate Check & Removal
+# 4. Train/Test Split
 # ------------------------------
-before = len(groceries)
-groceries = groceries.drop_duplicates()
-after = len(groceries)
+train_tx, test_tx = train_test_split(transactions, test_size=0.3, random_state=42)
 
-print(f"\n🔎 Duplicate Check: {before - after} duplicate rows removed")
-print("✅ Duplicates removed")
+print(f"\n✅ Train/Test Split Complete")
+print(f"   Train set: {len(train_tx)} baskets")
+print(f"   Test set : {len(test_tx)} baskets")
 
 # ------------------------------
 # 5. Basket Size Summary
@@ -67,12 +67,18 @@ plt.show()
 # ------------------------------
 os.makedirs("clean", exist_ok=True)
 
-# Save baskets as JSON (better for variable-length)
-import json
+# Save full baskets
 with open("clean/groceries_baskets.json", "w") as f:
     json.dump(transactions, f)
+
+# Save train/test separately
+with open("clean/groceries_train.json", "w") as f:
+    json.dump(train_tx, f)
+
+with open("clean/groceries_test.json", "w") as f:
+    json.dump(test_tx, f)
 
 # Save ragged DataFrame as CSV
 groceries.to_csv("clean/groceries_clean.csv", index=False)
 
-print("\n✅ Cleaned datasets saved in 'clean/' folder")
+print("\n✅ Cleaned datasets (full/train/test) saved in 'clean/' folder")

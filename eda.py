@@ -8,14 +8,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from collections import Counter
+import json
+from itertools import combinations
+from collections import defaultdict
+import numpy as np
 
 sns.set(style="whitegrid", palette="muted")
 
 # ------------------------------
 # 1. Load Cleaned Data
 # ------------------------------
-import json
-
 with open("clean/groceries_baskets.json", "r") as f:
     transactions = json.load(f)
 
@@ -26,6 +28,17 @@ print(f"✅ Loaded {len(transactions)} transactions")
 # ------------------------------
 all_items = [item for basket in transactions for item in basket if item != ""]
 item_counts = Counter(all_items)
+
+# ✅ List all unique items and their frequencies
+items_df = pd.DataFrame(item_counts.items(), columns=["Item", "Frequency"])
+items_df = items_df.sort_values(by="Frequency", ascending=False).reset_index(drop=True)
+
+print(f"\n🔎 Total Unique Items: {items_df.shape[0]}")
+print("\nTop 10 Items:\n", items_df.head(10))
+
+# Save full item list
+items_df.to_csv("clean/grocery_item_frequencies.csv", index=False)
+print("\n✅ Saved item frequencies to 'clean/grocery_item_frequencies.csv'")
 
 # ------------------------------
 # 3. Univariate Analysis
@@ -56,8 +69,6 @@ plt.show()
 # 4. Bivariate Analysis
 # ------------------------------
 # Example: Basket size vs top item presence
-import numpy as np
-
 top_item_name = items[0]  # most frequent item
 basket_has_top_item = [top_item_name in basket for basket in transactions]
 
@@ -71,9 +82,6 @@ plt.show()
 # ------------------------------
 # 5. Item Co-occurrence Analysis (Multivariate)
 # ------------------------------
-from itertools import combinations
-from collections import defaultdict
-
 co_occurrence = defaultdict(int)
 
 # Count pairwise co-occurrences for top 20 items
@@ -85,8 +93,6 @@ for basket in transactions:
         co_occurrence[tuple(sorted(pair))] += 1
 
 # Convert to DataFrame for heatmap
-import numpy as np
-
 co_matrix = pd.DataFrame(np.zeros((20,20)), index=top_20_items, columns=top_20_items)
 
 for (i,j), count in co_occurrence.items():
