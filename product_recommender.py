@@ -10,141 +10,153 @@ Auto-generated Product Recommender
 apriori_rules = [
   {
     "if": [
-      "curd"
+      "eggs"
     ],
     "then": [
-      "beef"
+      "bread"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 2
   },
   {
     "if": [
-      "beef"
+      "bread"
     ],
     "then": [
-      "curd"
+      "eggs"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 2
   },
   {
     "if": [
-      "butter"
+      "milk"
     ],
     "then": [
-      "curd"
+      "eggs"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 2
   },
   {
     "if": [
-      "curd"
+      "eggs"
     ],
     "then": [
-      "butter"
+      "milk"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 2
   },
   {
     "if": [
-      "butter"
+      "milk"
     ],
     "then": [
-      "beef"
+      "bread"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 2
   },
   {
     "if": [
-      "beef"
+      "bread"
     ],
     "then": [
-      "butter"
+      "milk"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 2
   },
   {
     "if": [
-      "butter"
+      "milk"
     ],
     "then": [
-      "curd",
-      "beef"
+      "eggs",
+      "bread"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 3
   },
   {
     "if": [
-      "curd"
+      "eggs"
     ],
     "then": [
-      "butter",
-      "beef"
+      "milk",
+      "bread"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 3
   },
   {
     "if": [
-      "beef"
+      "bread"
     ],
     "then": [
-      "butter",
-      "curd"
+      "milk",
+      "eggs"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 3
   },
   {
     "if": [
-      "butter",
-      "curd"
+      "milk",
+      "eggs"
     ],
     "then": [
-      "beef"
+      "bread"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 3
   },
   {
     "if": [
-      "butter",
-      "beef"
+      "milk",
+      "bread"
     ],
     "then": [
-      "curd"
+      "eggs"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 3
   },
   {
     "if": [
-      "curd",
-      "beef"
+      "eggs",
+      "bread"
     ],
     "then": [
-      "butter"
+      "milk"
     ],
     "support": 1.0,
     "confidence": 1.0,
-    "lift": 1.0
+    "lift": 1.0,
+    "itemset_size": 3
   }
 ]
 

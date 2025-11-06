@@ -1,0 +1,7 @@
+antecedent,consequent,support,confidence,lift,itemset_size,min_support,min_confidence,min_lift,rule_id
+butter,milk;bread,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,apriori_rule_0001
+milk;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,apriori_rule_0002
+butter,eggs;bread,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,apriori_rule_0003
+eggs;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,apriori_rule_0004
+butter,milk;bread;eggs,0.1429,0.3333,2.3333,4,0.1,0.3,1.5,apriori_rule_0005
+milk;bread;eggs,butter,0.1429,1.0,2.3333,4,0.1,0.3,1.5,apriori_rule_0006
