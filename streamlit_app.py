@@ -9,6 +9,7 @@ from itertools import combinations
 from collections import Counter, defaultdict
 import itertools
 import csv
+import numpy as np
 
 # Custom modules
 import data_processing
@@ -16,7 +17,7 @@ import feature_engineering
 import eda
 from rule_miner import run_miner
 import decission_tree
-from decission_tree import run_evaluation
+from decission_tree import run_enhanced_evaluation, enhanced_evaluation, calculate_feature_importance
 from apriori import run_apriori, find_optimal_thresholds
 import self_evolving_engine 
 
@@ -122,7 +123,6 @@ with st.sidebar:
         "⚙️ Feature Engineering", 
         "📊 EDA", 
         "📈 Association Rules", 
-        "🌳 Decision Tree", 
         "🔮 Product Recommender",
         "🔄 Self-Evolving Engine"
     ]
@@ -538,105 +538,6 @@ elif selected_tab == "📈 Association Rules":
         </div>
         """, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
-
-# -------------------------------
-# TAB 5: Decision Tree
-# -------------------------------
-elif selected_tab == "🌳 Decision Tree":
-    st.markdown('<div class="tab-container">', unsafe_allow_html=True)
-    st.markdown('<h2 class="sub-header">🌳 Decision Tree for Basket Segmentation</h2>', unsafe_allow_html=True)
-    
-    feature_file = "features/train_baskets_features.json"
-    if os.path.exists(feature_file):
-        with open(feature_file, "r") as f:
-            X_data = [json.loads(line) for line in f]
-
-        st.success(f"✅ Loaded {len(X_data)} feature entries for decision tree modeling.")
-
-        # Model Configuration
-        max_depth = st.slider("Maximum Tree Depth", 2, 5, 3, 
-                              help="Controls the complexity of the decision tree")
-
-        # Initialize session_state for tree_model
-        if "tree_model" not in st.session_state:
-            st.session_state.tree_model = None
-
-        # Build Tree Button
-        if st.button("🌳 Build Decision Tree", use_container_width=True):
-            with st.spinner("Building decision tree model..."):
-                X = [decission_tree.extract_features(d) for d in X_data]
-                y = [decission_tree.label_basket(d) for d in X_data]
-                features = list(X[0].keys())
-                st.session_state.tree_model = decission_tree.build_tree(X, y, features, max_depth=max_depth)
-            st.success("✅ Decision tree built successfully!")
-
-        # Display Rules & Visualization only if tree exists
-        if st.session_state.tree_model:
-            tree_model = st.session_state.tree_model
-
-            st.markdown("#### 📜 Decision Tree Rules")
-            with st.expander("View Tree Rules", expanded=True):
-                rules_text = decission_tree.tree_to_rules(tree_model)
-                st.code(rules_text, language='text')
-            
-            st.markdown("#### 🌳 Decision Tree Visualization")
-            dot = decission_tree.tree_to_graphviz(tree_model)
-            st.graphviz_chart(dot.source)
-
-            # -------------------------------
-            # Interactive Basket Classification
-            # -------------------------------
-            st.markdown("#### 🎯 Classify a New Basket")
-            new_basket_input = st.text_input("Enter products (comma-separated)", "", 
-                                             placeholder="e.g., milk, bread, eggs")
-            
-            if st.button("🛒 Classify Basket"):
-                if new_basket_input.strip():
-                    basket_items = [item.strip() for item in new_basket_input.split(",") if item.strip()]
-                    features = decission_tree.extract_features({"basket": basket_items})
-                    predicted_segment = decission_tree.classify_segment(features, tree_model)
-                    st.success(f"Predicted Customer Segment: **{predicted_segment}**")
-                else:
-                    st.warning("Please enter some products to classify.")
-
-            # -------------------------------
-            # Model Evaluation
-            # -------------------------------
-            st.markdown("#### 📊 Model Evaluation")
-            acc, report, cm = decission_tree.run_evaluation(max_depth=max_depth)
-            
-            col1, col2 = st.columns(2)
-            with col1:
-                st.metric("Accuracy", f"{acc*100:.2f}%")
-            with col2:
-                st.metric("Training Samples", len(X_data))
-            
-            st.markdown("##### 📈 Classification Report")
-            report_df = pd.DataFrame(report).transpose()
-            st.dataframe(report_df.style.background_gradient(cmap="Blues", axis=0), 
-                         use_container_width=True)
-            
-            st.markdown("##### 🎨 Confusion Matrix")
-            fig, ax = plt.subplots(figsize=(8, 6))
-            labels = list(set([decission_tree.label_basket(d) for d in X_data]))  # dynamic labels
-            sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", 
-                        xticklabels=labels, yticklabels=labels, ax=ax,
-                        cbar_kws={'label': 'Number of Predictions'})
-            ax.set_xlabel("Predicted Label", fontweight='bold')
-            ax.set_ylabel("True Label", fontweight='bold')
-            ax.set_title("Confusion Matrix", fontweight='bold', pad=20)
-            st.pyplot(fig)
-
-    else:
-        st.markdown("""
-        <div class="warning-card">
-            <h3>⚠️ Feature Data Required</h3>
-            <p>Please run Feature Engineering first to generate feature matrices.</p>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # -------------------------------
 # TAB 6: Product Recommender
 # -------------------------------
@@ -965,40 +866,6 @@ elif selected_tab == "🔮 Product Recommender":
                                         st.rerun()
                     else:
                         st.info("Try adding some common items like 'whole milk', 'rolls/buns', or 'soda' to get better recommendations.")
-        
-        # Rules Preview Section
-        st.markdown("---")
-        st.markdown("#### 📋 Rules Preview")
-        
-        if rules:
-            # Show top rules
-            top_rules = sorted(rules, key=lambda x: x['confidence'], reverse=True)[:10]
-            rules_df = pd.DataFrame(top_rules)
-            
-            # Format the rules for better display
-            rules_display = []
-            for rule in top_rules:
-                rules_display.append({
-                    'Rule': f"If {', '.join(rule['if'])} → Then {', '.join(rule['then'])}",
-                    'Support': rule['support'],
-                    'Confidence': rule['confidence'],
-                    'Lift': rule['lift']
-                })
-            
-            rules_display_df = pd.DataFrame(rules_display)
-            st.dataframe(rules_display_df, use_container_width=True)
-            
-            # Download current rules
-            csv_data = pd.DataFrame(rules).to_csv(index=False).encode('utf-8')
-            st.download_button(
-                label=f"💾 Download {algorithm} Rules as CSV",
-                data=csv_data,
-                file_name=f"{algorithm.lower()}_rules.csv",
-                mime="text/csv",
-                use_container_width=True
-            )
-        else:
-            st.info("No rules to display. Please load rules first.")
     
     st.markdown('</div>', unsafe_allow_html=True)
 
