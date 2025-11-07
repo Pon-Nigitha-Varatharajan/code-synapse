@@ -1,23 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct  1 16:19:46 2025
-
-@author: ponnigithav
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Milestone 7: Self-Evolving Engine
-Automatically updates rules and regenerates product_recommender.py
+Milestone 7 (Optimized): Self-Evolving Engine using FP-Growth
+Automatically updates association rules and regenerates product_recommender.py
+Much faster than Apriori-based version.
 """
 
 import os
 import json
-import time
-from collections import defaultdict
-from apriori import run_apriori, evaluate_rules
+import pandas as pd
+from mlxtend.frequent_patterns import fpgrowth, association_rules
 from generator_code import generate_recommender_from_rules
 
 # ------------------------------
@@ -26,7 +18,7 @@ from generator_code import generate_recommender_from_rules
 BASE_DIR = "/Users/ponnigithav/Desktop/code-synapse"
 RULES_FILE = os.path.join(BASE_DIR, "rules", "association_rules.json")
 OUTPUT_RECOMMENDER = os.path.join(BASE_DIR, "product_recommender.py")
-NEW_BASKETS_FILE = os.path.join(BASE_DIR, "data", "new_baskets.json")  # simulated new data
+NEW_BASKETS_FILE = os.path.join(BASE_DIR, "data", "new_baskets.json")
 
 # ------------------------------
 # Parameters
@@ -34,8 +26,7 @@ NEW_BASKETS_FILE = os.path.join(BASE_DIR, "data", "new_baskets.json")  # simulat
 MIN_SUPPORT = 0.03
 MIN_CONFIDENCE = 0.5
 MIN_LIFT = 1.0
-PRUNE_LIFT_THRESHOLD = 1.0   # rules below this lift are pruned
-CHECK_INTERVAL = 30          # seconds between checks for new baskets
+PRUNE_LIFT_THRESHOLD = 1.0
 
 # ------------------------------
 # Utility: Load baskets
@@ -47,34 +38,63 @@ def load_baskets(file_path):
     return []
 
 # ------------------------------
-# Utility: Rank rules by lift
+# FP-Growth Rule Mining
 # ------------------------------
-def rank_rules(rules):
-    return sorted(rules, key=lambda x: x['lift'], reverse=True)
+def run_fpgrowth(baskets):
+    """Run FP-Growth and generate association rules."""
+    # Convert baskets to one-hot encoded DataFrame
+    unique_items = sorted({item for basket in baskets for item in basket})
+    df = pd.DataFrame([{item: (item in basket) for item in unique_items} for basket in baskets])
+    
+    # Frequent itemsets
+    frequent_itemsets = fpgrowth(df, min_support=MIN_SUPPORT, use_colnames=True)
+    if frequent_itemsets.empty:
+        print("⚠️ No frequent itemsets found — check support threshold or dataset size.")
+        return []
+    
+    # Association rules
+    rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=MIN_CONFIDENCE)
+    
+    # Filter and format
+    rules = rules[rules['lift'] >= MIN_LIFT].sort_values(by='lift', ascending=False)
+    
+    # Convert to list of dicts for saving
+    formatted_rules = []
+    for _, row in rules.iterrows():
+        formatted_rules.append({
+            "if": list(row['antecedents']),
+            "then": list(row['consequents']),
+            "support": float(row['support']),
+            "confidence": float(row['confidence']),
+            "lift": float(row['lift']),
+            "itemset_size": len(row['antecedents']) + len(row['consequents'])
+        })
+    
+    return formatted_rules
 
 # ------------------------------
-# Main loop
+# Self-Evolving Engine (One Run)
 # ------------------------------
 def run_self_evolving_engine_once(new_baskets):
+    print("🚀 Running FP-Growth-based Self-Evolving Engine...")
     
-    # Existing logic from run_self_evolving_engine, but no infinite loop
-    # Combine old + new baskets
-    all_baskets = new_baskets
-
-    # Run Apriori
-    rules = run_apriori(all_baskets, min_support=MIN_SUPPORT,
-                        min_confidence=MIN_CONFIDENCE, min_lift=MIN_LIFT)
-    # Prune and rank
-    pruned_rules = [r for r in rules if r['lift'] >= PRUNE_LIFT_THRESHOLD]
-    ranked_rules = sorted(pruned_rules, key=lambda x: x['lift'], reverse=True)
-
+    # Run FP-Growth
+    rules = run_fpgrowth(new_baskets)
+    print(f"✅ Generated {len(rules)} association rules")
+    
     # Save rules
     os.makedirs(os.path.dirname(RULES_FILE), exist_ok=True)
     with open(RULES_FILE, "w") as f:
-        json.dump(ranked_rules, f, indent=2)
+        json.dump(rules, f, indent=2)
+    print(f"💾 Rules saved to: {RULES_FILE}")
 
-    # Regenerate product_recommender.py
-    generate_recommender_from_rules(ranked_rules, OUTPUT_RECOMMENDER)
+    # Regenerate recommender
+    generate_recommender_from_rules(rules, OUTPUT_RECOMMENDER)
+    print(f"🤖 Recommender file updated at: {OUTPUT_RECOMMENDER}")
 
 if __name__ == "__main__":
-    run_self_evolving_engine()
+    new_baskets = load_baskets(NEW_BASKETS_FILE)
+    if new_baskets:
+        run_self_evolving_engine_once(new_baskets)
+    else:
+        print("⚠️ No new baskets found. Add transactions to data/new_baskets.json.")

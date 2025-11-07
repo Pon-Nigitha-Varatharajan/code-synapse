@@ -21,7 +21,7 @@ from apriori import run_apriori, find_optimal_thresholds
 
 # Configure page
 st.set_page_config(
-    page_title="Groceries Analytics Platform",
+    page_title="Code-Synapse",
     page_icon="🛒",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -106,7 +106,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown('<h1 class="main-header">🛒 Groceries Analytics Platform</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-header">🛒 Code-Synapse</h1>', unsafe_allow_html=True)
 st.markdown("---")
 
 # -------------------------------
@@ -696,10 +696,8 @@ elif selected_tab == "🔮 Product Recommender":
         col1, col2 = st.columns(2)
         with col1:
             fp_status = "✅ Loaded" if fp_rules else "❌ Not Loaded"
-            st.metric("FP-Growth Rules", f"{len(fp_rules)} rules", fp_status)
         with col2:
             apriori_status = "✅ Loaded" if apriori_rules else "❌ Not Loaded"
-            st.metric("Apriori Rules", f"{len(apriori_rules)} rules", apriori_status)
         
         # Only show algorithm selection if both rule sets are available
         if fp_rules and apriori_rules:
@@ -753,7 +751,7 @@ elif selected_tab == "🔮 Product Recommender":
                 rule_products.add(r["then"])
         rule_products = sorted(rule_products)
 
-        st.info(f"**{algorithm} Stats:** {len(rules)} rules loaded | {len(all_unique_products)} unique products available")
+        st.info(f"**{algorithm} Stats:**  rules loaded | {len(all_unique_products)} unique products available")
 
         # Initialize session state for basket and algorithm
         if "basket" not in st.session_state:
@@ -1084,8 +1082,3 @@ elif selected_tab == "🔄 Self-Evolving Engine":
 
 # Footer
 st.markdown("---")
-st.markdown("""
-<div style="text-align: center; color: #666; margin-top: 2rem;">
-    <p>🛒 Groceries Analytics Platform | Built with Streamlit | Professional Retail Analytics</p>
-</div>
-""", unsafe_allow_html=True) 

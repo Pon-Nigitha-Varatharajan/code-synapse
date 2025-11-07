@@ -1,67 +1,1150 @@
 antecedent,consequent,support,confidence,lift,itemset_size,min_support,min_confidence,min_lift,parameter_set,rule_id
-bread,butter,0.4286,0.6,1.4,2,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000001
-butter,bread,0.4286,1.0,1.4,2,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000002
-bread,milk;butter,0.2857,0.4,1.4,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000003
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000004
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000005
-milk;butter,bread,0.2857,1.0,1.4,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000006
-bread,eggs;butter,0.2857,0.4,1.4,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000007
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000008
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000009
-eggs;butter,bread,0.2857,1.0,1.4,3,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000010
-butter,milk;bread;eggs,0.1429,0.3333,2.3333,4,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000011
-milk;bread,eggs;butter,0.1429,0.3333,1.1667,4,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000012
-milk;butter,eggs;bread,0.1429,0.5,1.1667,4,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000013
-eggs;bread,milk;butter,0.1429,0.3333,1.1667,4,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000014
-eggs;butter,milk;bread,0.1429,0.5,1.1667,4,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000015
-milk;bread;eggs,butter,0.1429,1.0,2.3333,4,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000016
-milk;eggs;butter,bread,0.1429,1.0,1.4,4,0.1,0.3,1.0,s0.1_c0.3_l1.0,apriori_all_000017
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,s0.1_c0.3_l1.5,apriori_all_000018
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,s0.1_c0.3_l1.5,apriori_all_000019
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,s0.1_c0.3_l1.5,apriori_all_000020
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.3,1.5,s0.1_c0.3_l1.5,apriori_all_000021
-butter,milk;bread;eggs,0.1429,0.3333,2.3333,4,0.1,0.3,1.5,s0.1_c0.3_l1.5,apriori_all_000022
-milk;bread;eggs,butter,0.1429,1.0,2.3333,4,0.1,0.3,1.5,s0.1_c0.3_l1.5,apriori_all_000023
-bread,butter,0.4286,0.6,1.4,2,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000024
-butter,bread,0.4286,1.0,1.4,2,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000025
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000026
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000027
-milk;butter,bread,0.2857,1.0,1.4,3,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000028
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000029
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000030
-eggs;butter,bread,0.2857,1.0,1.4,3,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000031
-milk;butter,eggs;bread,0.1429,0.5,1.1667,4,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000032
-eggs;butter,milk;bread,0.1429,0.5,1.1667,4,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000033
-milk;bread;eggs,butter,0.1429,1.0,2.3333,4,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000034
-milk;eggs;butter,bread,0.1429,1.0,1.4,4,0.1,0.5,1.0,s0.1_c0.5_l1.0,apriori_all_000035
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.1,0.5,1.5,s0.1_c0.5_l1.5,apriori_all_000036
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.5,1.5,s0.1_c0.5_l1.5,apriori_all_000037
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.1,0.5,1.5,s0.1_c0.5_l1.5,apriori_all_000038
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.1,0.5,1.5,s0.1_c0.5_l1.5,apriori_all_000039
-milk;bread;eggs,butter,0.1429,1.0,2.3333,4,0.1,0.5,1.5,s0.1_c0.5_l1.5,apriori_all_000040
-bread,butter,0.4286,0.6,1.4,2,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000041
-butter,bread,0.4286,1.0,1.4,2,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000042
-bread,milk;butter,0.2857,0.4,1.4,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000043
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000044
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000045
-milk;butter,bread,0.2857,1.0,1.4,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000046
-bread,eggs;butter,0.2857,0.4,1.4,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000047
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000048
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000049
-eggs;butter,bread,0.2857,1.0,1.4,3,0.2,0.3,1.0,s0.2_c0.3_l1.0,apriori_all_000050
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.2,0.3,1.5,s0.2_c0.3_l1.5,apriori_all_000051
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.3,1.5,s0.2_c0.3_l1.5,apriori_all_000052
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.2,0.3,1.5,s0.2_c0.3_l1.5,apriori_all_000053
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.3,1.5,s0.2_c0.3_l1.5,apriori_all_000054
-bread,butter,0.4286,0.6,1.4,2,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000055
-butter,bread,0.4286,1.0,1.4,2,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000056
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000057
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000058
-milk;butter,bread,0.2857,1.0,1.4,3,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000059
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000060
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000061
-eggs;butter,bread,0.2857,1.0,1.4,3,0.2,0.5,1.0,s0.2_c0.5_l1.0,apriori_all_000062
-butter,milk;bread,0.2857,0.6667,1.5556,3,0.2,0.5,1.5,s0.2_c0.5_l1.5,apriori_all_000063
-milk;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.5,1.5,s0.2_c0.5_l1.5,apriori_all_000064
-butter,eggs;bread,0.2857,0.6667,1.5556,3,0.2,0.5,1.5,s0.2_c0.5_l1.5,apriori_all_000065
-eggs;bread,butter,0.2857,0.6667,1.5556,3,0.2,0.5,1.5,s0.2_c0.5_l1.5,apriori_all_000066
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000001
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000002
+frozen meals,whole milk,0.0106,0.3668,1.41,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000003
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000004
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000005
+white bread,other vegetables,0.0139,0.3221,1.6724,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000006
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000007
+white bread,whole milk,0.0167,0.3859,1.4833,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000008
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000009
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000010
+oil,whole milk,0.0105,0.3892,1.4959,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000011
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000012
+beef,other vegetables,0.0189,0.3662,1.9011,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000013
+frankfurter,rolls/buns,0.0196,0.3285,1.7707,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000014
+long life bakery product,whole milk,0.0137,0.3658,1.4059,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000015
+newspapers,whole milk,0.0289,0.3625,1.3932,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000016
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000017
+coffee,whole milk,0.0195,0.3427,1.3173,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000018
+fruit/vegetable juice,whole milk,0.028,0.3697,1.4211,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000019
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000020
+sugar,other vegetables,0.0106,0.3188,1.6549,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000021
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000022
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000023
+berries,whole milk,0.0122,0.3574,1.3739,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000024
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000025
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000026
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000027
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000028
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000029
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000030
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000031
+pastry,whole milk,0.035,0.3887,1.4941,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000032
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000033
+napkins,whole milk,0.0195,0.384,1.4758,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000034
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000035
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000036
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000037
+frankfurter,whole milk,0.0209,0.3504,1.3467,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000038
+dessert,whole milk,0.0135,0.3591,1.3802,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000039
+berries,yogurt,0.0115,0.3362,2.3809,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000040
+berries,other vegetables,0.0107,0.3149,1.6348,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000041
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000042
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000043
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000044
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000045
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000046
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000047
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000048
+cream cheese,other vegetables,0.0125,0.3233,1.6785,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000049
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000050
+cream cheese,yogurt,0.0122,0.3158,2.2365,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000051
+onions,whole milk,0.0115,0.393,1.5107,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000052
+waffles,whole milk,0.0137,0.3481,1.3382,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000053
+curd,yogurt,0.0173,0.3216,2.2778,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000054
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000055
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000056
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000057
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000058
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000059
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000060
+frozen vegetables,other vegetables,0.0174,0.3647,1.8936,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000061
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000062
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000063
+chocolate,whole milk,0.0182,0.3561,1.3688,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000064
+hygiene articles,whole milk,0.0131,0.3782,1.4535,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000065
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000066
+butter milk,other vegetables,0.0103,0.3757,1.9503,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000067
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000068
+beef,root vegetables,0.0171,0.3324,3.0838,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000069
+curd,other vegetables,0.0167,0.3108,1.6136,2,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000070
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000071
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000072
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000073
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000074
+rolls/buns;whole milk,other vegetables,0.0176,0.3087,1.6025,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000075
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000076
+whole milk;bottled water,other vegetables,0.0107,0.3083,1.6007,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000077
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000078
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000079
+whole milk;tropical fruit,yogurt,0.0148,0.3505,2.4825,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000080
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000081
+whole milk;whipped/sour cream,yogurt,0.011,0.3408,2.4137,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000082
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000083
+soda;yogurt,whole milk,0.0109,0.3807,1.4633,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000084
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000085
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000086
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000087
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000088
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000089
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000090
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000091
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000092
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000093
+whole milk;tropical fruit,other vegetables,0.016,0.378,1.9624,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000094
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000095
+soda;whole milk,other vegetables,0.0148,0.3579,1.858,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000096
+rolls/buns;yogurt,other vegetables,0.0107,0.3071,1.5941,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000097
+other vegetables;tropical fruit,yogurt,0.0118,0.3347,2.3705,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000098
+tropical fruit;yogurt,other vegetables,0.0118,0.3932,2.0413,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000099
+other vegetables;tropical fruit,root vegetables,0.0113,0.3223,2.9903,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000100
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000101
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000102
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000103
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000104
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000105
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000106
+whole milk;curd,yogurt,0.01,0.3791,2.685,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000107
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000108
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000109
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000110
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000111
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000112
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000113
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000114
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000115
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000116
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000117
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000118
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000119
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000120
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000121
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000122
+pastry;whole milk,other vegetables,0.0113,0.3237,1.6803,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000123
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000124
+whole milk;sausage,other vegetables,0.011,0.3439,1.7853,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000125
+citrus fruit;whole milk,yogurt,0.0106,0.3318,2.35,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000126
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000127
+rolls/buns;sausage,whole milk,0.0102,0.3349,1.2874,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000128
+whole milk;sausage,rolls/buns,0.0102,0.3167,1.7075,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000129
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000130
+rolls/buns;sausage,soda,0.0102,0.3349,1.9071,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000131
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000132
+whole milk;curd,other vegetables,0.0103,0.3901,2.0253,3,0.01,0.3,0.5,s0.01_c0.3_l0.5,apriori_all_000133
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000134
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000135
+frozen meals,whole milk,0.0106,0.3668,1.41,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000136
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000137
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000138
+white bread,other vegetables,0.0139,0.3221,1.6724,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000139
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000140
+white bread,whole milk,0.0167,0.3859,1.4833,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000141
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000142
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000143
+oil,whole milk,0.0105,0.3892,1.4959,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000144
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000145
+beef,other vegetables,0.0189,0.3662,1.9011,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000146
+frankfurter,rolls/buns,0.0196,0.3285,1.7707,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000147
+long life bakery product,whole milk,0.0137,0.3658,1.4059,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000148
+newspapers,whole milk,0.0289,0.3625,1.3932,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000149
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000150
+coffee,whole milk,0.0195,0.3427,1.3173,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000151
+fruit/vegetable juice,whole milk,0.028,0.3697,1.4211,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000152
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000153
+sugar,other vegetables,0.0106,0.3188,1.6549,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000154
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000155
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000156
+berries,whole milk,0.0122,0.3574,1.3739,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000157
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000158
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000159
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000160
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000161
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000162
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000163
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000164
+pastry,whole milk,0.035,0.3887,1.4941,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000165
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000166
+napkins,whole milk,0.0195,0.384,1.4758,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000167
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000168
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000169
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000170
+frankfurter,whole milk,0.0209,0.3504,1.3467,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000171
+dessert,whole milk,0.0135,0.3591,1.3802,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000172
+berries,yogurt,0.0115,0.3362,2.3809,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000173
+berries,other vegetables,0.0107,0.3149,1.6348,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000174
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000175
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000176
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000177
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000178
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000179
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000180
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000181
+cream cheese,other vegetables,0.0125,0.3233,1.6785,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000182
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000183
+cream cheese,yogurt,0.0122,0.3158,2.2365,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000184
+onions,whole milk,0.0115,0.393,1.5107,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000185
+waffles,whole milk,0.0137,0.3481,1.3382,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000186
+curd,yogurt,0.0173,0.3216,2.2778,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000187
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000188
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000189
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000190
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000191
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000192
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000193
+frozen vegetables,other vegetables,0.0174,0.3647,1.8936,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000194
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000195
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000196
+chocolate,whole milk,0.0182,0.3561,1.3688,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000197
+hygiene articles,whole milk,0.0131,0.3782,1.4535,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000198
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000199
+butter milk,other vegetables,0.0103,0.3757,1.9503,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000200
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000201
+beef,root vegetables,0.0171,0.3324,3.0838,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000202
+curd,other vegetables,0.0167,0.3108,1.6136,2,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000203
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000204
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000205
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000206
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000207
+rolls/buns;whole milk,other vegetables,0.0176,0.3087,1.6025,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000208
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000209
+whole milk;bottled water,other vegetables,0.0107,0.3083,1.6007,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000210
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000211
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000212
+whole milk;tropical fruit,yogurt,0.0148,0.3505,2.4825,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000213
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000214
+whole milk;whipped/sour cream,yogurt,0.011,0.3408,2.4137,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000215
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000216
+soda;yogurt,whole milk,0.0109,0.3807,1.4633,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000217
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000218
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000219
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000220
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000221
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000222
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000223
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000224
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000225
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000226
+whole milk;tropical fruit,other vegetables,0.016,0.378,1.9624,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000227
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000228
+soda;whole milk,other vegetables,0.0148,0.3579,1.858,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000229
+rolls/buns;yogurt,other vegetables,0.0107,0.3071,1.5941,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000230
+other vegetables;tropical fruit,yogurt,0.0118,0.3347,2.3705,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000231
+tropical fruit;yogurt,other vegetables,0.0118,0.3932,2.0413,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000232
+other vegetables;tropical fruit,root vegetables,0.0113,0.3223,2.9903,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000233
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000234
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000235
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000236
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000237
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000238
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000239
+whole milk;curd,yogurt,0.01,0.3791,2.685,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000240
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000241
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000242
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000243
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000244
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000245
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000246
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000247
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000248
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000249
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000250
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000251
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000252
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000253
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000254
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000255
+pastry;whole milk,other vegetables,0.0113,0.3237,1.6803,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000256
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000257
+whole milk;sausage,other vegetables,0.011,0.3439,1.7853,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000258
+citrus fruit;whole milk,yogurt,0.0106,0.3318,2.35,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000259
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000260
+rolls/buns;sausage,whole milk,0.0102,0.3349,1.2874,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000261
+whole milk;sausage,rolls/buns,0.0102,0.3167,1.7075,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000262
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000263
+rolls/buns;sausage,soda,0.0102,0.3349,1.9071,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000264
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000265
+whole milk;curd,other vegetables,0.0103,0.3901,2.0253,3,0.01,0.3,1.0,s0.01_c0.3_l1.0,apriori_all_000266
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000267
+frozen meals,whole milk,0.0106,0.3668,1.41,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000268
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000269
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000270
+white bread,other vegetables,0.0139,0.3221,1.6724,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000271
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000272
+white bread,whole milk,0.0167,0.3859,1.4833,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000273
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000274
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000275
+oil,whole milk,0.0105,0.3892,1.4959,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000276
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000277
+beef,other vegetables,0.0189,0.3662,1.9011,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000278
+frankfurter,rolls/buns,0.0196,0.3285,1.7707,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000279
+long life bakery product,whole milk,0.0137,0.3658,1.4059,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000280
+newspapers,whole milk,0.0289,0.3625,1.3932,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000281
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000282
+coffee,whole milk,0.0195,0.3427,1.3173,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000283
+fruit/vegetable juice,whole milk,0.028,0.3697,1.4211,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000284
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000285
+sugar,other vegetables,0.0106,0.3188,1.6549,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000286
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000287
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000288
+berries,whole milk,0.0122,0.3574,1.3739,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000289
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000290
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000291
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000292
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000293
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000294
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000295
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000296
+pastry,whole milk,0.035,0.3887,1.4941,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000297
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000298
+napkins,whole milk,0.0195,0.384,1.4758,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000299
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000300
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000301
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000302
+frankfurter,whole milk,0.0209,0.3504,1.3467,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000303
+dessert,whole milk,0.0135,0.3591,1.3802,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000304
+berries,yogurt,0.0115,0.3362,2.3809,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000305
+berries,other vegetables,0.0107,0.3149,1.6348,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000306
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000307
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000308
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000309
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000310
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000311
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000312
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000313
+cream cheese,other vegetables,0.0125,0.3233,1.6785,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000314
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000315
+cream cheese,yogurt,0.0122,0.3158,2.2365,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000316
+onions,whole milk,0.0115,0.393,1.5107,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000317
+waffles,whole milk,0.0137,0.3481,1.3382,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000318
+curd,yogurt,0.0173,0.3216,2.2778,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000319
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000320
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000321
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000322
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000323
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000324
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000325
+frozen vegetables,other vegetables,0.0174,0.3647,1.8936,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000326
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000327
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000328
+chocolate,whole milk,0.0182,0.3561,1.3688,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000329
+hygiene articles,whole milk,0.0131,0.3782,1.4535,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000330
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000331
+butter milk,other vegetables,0.0103,0.3757,1.9503,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000332
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000333
+beef,root vegetables,0.0171,0.3324,3.0838,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000334
+curd,other vegetables,0.0167,0.3108,1.6136,2,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000335
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000336
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000337
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000338
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000339
+rolls/buns;whole milk,other vegetables,0.0176,0.3087,1.6025,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000340
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000341
+whole milk;bottled water,other vegetables,0.0107,0.3083,1.6007,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000342
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000343
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000344
+whole milk;tropical fruit,yogurt,0.0148,0.3505,2.4825,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000345
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000346
+whole milk;whipped/sour cream,yogurt,0.011,0.3408,2.4137,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000347
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000348
+soda;yogurt,whole milk,0.0109,0.3807,1.4633,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000349
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000350
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000351
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000352
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000353
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000354
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000355
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000356
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000357
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000358
+whole milk;tropical fruit,other vegetables,0.016,0.378,1.9624,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000359
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000360
+soda;whole milk,other vegetables,0.0148,0.3579,1.858,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000361
+rolls/buns;yogurt,other vegetables,0.0107,0.3071,1.5941,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000362
+other vegetables;tropical fruit,yogurt,0.0118,0.3347,2.3705,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000363
+tropical fruit;yogurt,other vegetables,0.0118,0.3932,2.0413,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000364
+other vegetables;tropical fruit,root vegetables,0.0113,0.3223,2.9903,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000365
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000366
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000367
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000368
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000369
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000370
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000371
+whole milk;curd,yogurt,0.01,0.3791,2.685,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000372
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000373
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000374
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000375
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000376
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000377
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000378
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000379
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000380
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000381
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000382
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000383
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000384
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000385
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000386
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000387
+pastry;whole milk,other vegetables,0.0113,0.3237,1.6803,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000388
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000389
+whole milk;sausage,other vegetables,0.011,0.3439,1.7853,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000390
+citrus fruit;whole milk,yogurt,0.0106,0.3318,2.35,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000391
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000392
+rolls/buns;sausage,whole milk,0.0102,0.3349,1.2874,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000393
+whole milk;sausage,rolls/buns,0.0102,0.3167,1.7075,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000394
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000395
+rolls/buns;sausage,soda,0.0102,0.3349,1.9071,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000396
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000397
+whole milk;curd,other vegetables,0.0103,0.3901,2.0253,3,0.01,0.3,1.2,s0.01_c0.3_l1.2,apriori_all_000398
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000399
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000400
+white bread,other vegetables,0.0139,0.3221,1.6724,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000401
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000402
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000403
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000404
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000405
+beef,other vegetables,0.0189,0.3662,1.9011,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000406
+frankfurter,rolls/buns,0.0196,0.3285,1.7707,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000407
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000408
+sugar,other vegetables,0.0106,0.3188,1.6549,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000409
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000410
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000411
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000412
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000413
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000414
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000415
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000416
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000417
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000418
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000419
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000420
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000421
+berries,yogurt,0.0115,0.3362,2.3809,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000422
+berries,other vegetables,0.0107,0.3149,1.6348,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000423
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000424
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000425
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000426
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000427
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000428
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000429
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000430
+cream cheese,other vegetables,0.0125,0.3233,1.6785,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000431
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000432
+cream cheese,yogurt,0.0122,0.3158,2.2365,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000433
+onions,whole milk,0.0115,0.393,1.5107,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000434
+curd,yogurt,0.0173,0.3216,2.2778,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000435
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000436
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000437
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000438
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000439
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000440
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000441
+frozen vegetables,other vegetables,0.0174,0.3647,1.8936,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000442
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000443
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000444
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000445
+butter milk,other vegetables,0.0103,0.3757,1.9503,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000446
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000447
+beef,root vegetables,0.0171,0.3324,3.0838,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000448
+curd,other vegetables,0.0167,0.3108,1.6136,2,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000449
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000450
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000451
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000452
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000453
+rolls/buns;whole milk,other vegetables,0.0176,0.3087,1.6025,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000454
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000455
+whole milk;bottled water,other vegetables,0.0107,0.3083,1.6007,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000456
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000457
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000458
+whole milk;tropical fruit,yogurt,0.0148,0.3505,2.4825,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000459
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000460
+whole milk;whipped/sour cream,yogurt,0.011,0.3408,2.4137,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000461
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000462
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000463
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000464
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000465
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000466
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000467
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000468
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000469
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000470
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000471
+whole milk;tropical fruit,other vegetables,0.016,0.378,1.9624,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000472
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000473
+soda;whole milk,other vegetables,0.0148,0.3579,1.858,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000474
+rolls/buns;yogurt,other vegetables,0.0107,0.3071,1.5941,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000475
+other vegetables;tropical fruit,yogurt,0.0118,0.3347,2.3705,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000476
+tropical fruit;yogurt,other vegetables,0.0118,0.3932,2.0413,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000477
+other vegetables;tropical fruit,root vegetables,0.0113,0.3223,2.9903,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000478
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000479
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000480
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000481
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000482
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000483
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000484
+whole milk;curd,yogurt,0.01,0.3791,2.685,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000485
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000486
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000487
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000488
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000489
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000490
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000491
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000492
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000493
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000494
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000495
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000496
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000497
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000498
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000499
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000500
+pastry;whole milk,other vegetables,0.0113,0.3237,1.6803,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000501
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000502
+whole milk;sausage,other vegetables,0.011,0.3439,1.7853,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000503
+citrus fruit;whole milk,yogurt,0.0106,0.3318,2.35,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000504
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000505
+whole milk;sausage,rolls/buns,0.0102,0.3167,1.7075,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000506
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000507
+rolls/buns;sausage,soda,0.0102,0.3349,1.9071,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000508
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000509
+whole milk;curd,other vegetables,0.0103,0.3901,2.0253,3,0.01,0.3,1.5,s0.01_c0.3_l1.5,apriori_all_000510
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000511
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000512
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000513
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000514
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000515
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000516
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000517
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000518
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000519
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000520
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000521
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000522
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000523
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000524
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000525
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000526
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000527
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000528
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000529
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000530
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000531
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000532
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000533
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000534
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000535
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000536
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000537
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000538
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000539
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000540
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000541
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000542
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000543
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000544
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000545
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000546
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000547
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000548
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000549
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000550
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000551
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000552
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000553
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000554
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000555
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000556
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000557
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000558
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000559
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000560
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000561
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000562
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000563
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000564
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000565
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000566
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000567
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000568
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000569
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000570
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000571
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000572
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000573
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000574
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000575
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000576
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.4,0.5,s0.01_c0.4_l0.5,apriori_all_000577
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000578
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000579
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000580
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000581
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000582
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000583
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000584
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000585
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000586
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000587
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000588
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000589
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000590
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000591
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000592
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000593
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000594
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000595
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000596
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000597
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000598
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000599
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000600
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000601
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000602
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000603
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000604
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000605
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000606
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000607
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000608
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000609
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000610
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000611
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000612
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000613
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000614
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000615
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000616
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000617
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000618
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000619
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000620
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000621
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000622
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000623
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000624
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000625
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000626
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000627
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000628
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000629
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000630
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000631
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000632
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000633
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000634
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000635
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000636
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000637
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000638
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000639
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000640
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000641
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000642
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000643
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.4,1.0,s0.01_c0.4_l1.0,apriori_all_000644
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000645
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000646
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000647
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000648
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000649
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000650
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000651
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000652
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000653
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000654
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000655
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000656
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000657
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000658
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000659
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000660
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000661
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000662
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000663
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000664
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000665
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000666
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000667
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000668
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000669
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000670
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000671
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000672
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000673
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000674
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000675
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000676
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000677
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000678
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000679
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000680
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000681
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000682
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000683
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000684
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000685
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000686
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000687
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000688
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000689
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000690
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000691
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000692
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000693
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000694
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000695
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000696
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000697
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000698
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000699
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000700
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000701
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000702
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000703
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000704
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000705
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000706
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000707
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000708
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000709
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000710
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.4,1.2,s0.01_c0.4_l1.2,apriori_all_000711
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000712
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000713
+onions,other vegetables,0.0129,0.4428,2.2987,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000714
+meat,whole milk,0.0112,0.4254,1.6351,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000715
+sugar,whole milk,0.0148,0.4454,1.712,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000716
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000717
+pork,whole milk,0.0225,0.4036,1.5515,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000718
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000719
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000720
+chicken,other vegetables,0.0177,0.4207,2.184,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000721
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000722
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000723
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000724
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000725
+cream cheese,whole milk,0.0161,0.4173,1.6039,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000726
+ham,whole milk,0.0119,0.4432,1.7037,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000727
+beef,whole milk,0.0221,0.4282,1.6457,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000728
+hamburger meat,other vegetables,0.0138,0.4025,2.0898,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000729
+curd,whole milk,0.0264,0.4919,1.8907,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000730
+chicken,whole milk,0.0179,0.4241,1.6302,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000731
+hard cheese,whole milk,0.0105,0.4186,1.609,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000732
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000733
+sliced cheese,whole milk,0.0115,0.4731,1.8183,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000734
+hamburger meat,whole milk,0.0154,0.4492,1.7264,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000735
+butter milk,whole milk,0.0122,0.4444,1.7083,2,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000736
+rolls/buns;tropical fruit,whole milk,0.0112,0.4451,1.7108,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000737
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000738
+whole milk;fruit/vegetable juice,other vegetables,0.0113,0.4041,2.0981,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000739
+rolls/buns;other vegetables,whole milk,0.0176,0.4246,1.6319,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000740
+other vegetables;bottled water,whole milk,0.0107,0.4302,1.6537,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000741
+rolls/buns;yogurt,whole milk,0.0157,0.4481,1.7225,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000742
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000743
+tropical fruit;yogurt,whole milk,0.0148,0.4951,1.9032,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000744
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000745
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000746
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000747
+margarine;whole milk,other vegetables,0.0107,0.4157,2.1583,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000748
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000749
+butter;whole milk,other vegetables,0.0121,0.4301,2.2326,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000750
+other vegetables;pork,whole milk,0.01,0.4894,1.8809,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000751
+whole milk;pork,other vegetables,0.01,0.4452,2.3111,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000752
+other vegetables;tropical fruit,whole milk,0.016,0.4545,1.7471,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000753
+soda;other vegetables,whole milk,0.0148,0.4435,1.7046,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000754
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000755
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000756
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000757
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000758
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000759
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000760
+bottled water;yogurt,whole milk,0.01,0.4259,1.6371,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000761
+root vegetables;yogurt,other vegetables,0.0116,0.4624,2.4007,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000762
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000763
+whole milk;domestic eggs,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000764
+pip fruit;other vegetables,whole milk,0.0122,0.4941,1.8992,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000765
+pip fruit;whole milk,other vegetables,0.0122,0.4221,2.1914,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000766
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000767
+whole milk;frozen vegetables,other vegetables,0.0103,0.4641,2.4092,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000768
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000769
+whole milk;whipped/sour cream,other vegetables,0.0138,0.426,2.2116,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000770
+rolls/buns;root vegetables,other vegetables,0.0122,0.497,2.5804,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000771
+citrus fruit;other vegetables,whole milk,0.0131,0.4523,1.7383,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000772
+citrus fruit;whole milk,other vegetables,0.0131,0.4091,2.1238,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000773
+pastry;other vegetables,whole milk,0.0113,0.4906,1.8856,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000774
+other vegetables;sausage,whole milk,0.011,0.4064,1.5621,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000775
+citrus fruit;yogurt,whole milk,0.0106,0.474,1.822,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000776
+soda;sausage,rolls/buns,0.0102,0.4094,2.2067,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000777
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.4,1.5,s0.01_c0.4_l1.5,apriori_all_000778
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000779
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000780
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000781
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000782
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000783
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000784
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000785
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000786
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000787
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000788
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000789
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000790
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000791
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000792
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000793
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.5,0.5,s0.01_c0.5_l0.5,apriori_all_000794
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000795
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000796
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000797
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000798
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000799
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000800
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000801
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000802
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000803
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000804
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000805
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000806
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000807
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000808
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000809
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.5,1.0,s0.01_c0.5_l1.0,apriori_all_000810
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000811
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000812
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000813
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000814
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000815
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000816
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000817
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000818
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000819
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000820
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000821
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000822
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000823
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000824
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000825
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.5,1.2,s0.01_c0.5_l1.2,apriori_all_000826
+butter,whole milk,0.028,0.5052,1.942,2,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000827
+other vegetables;fruit/vegetable juice,whole milk,0.0113,0.5166,1.9855,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000828
+root vegetables;yogurt,whole milk,0.0139,0.5549,2.1329,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000829
+whipped/sour cream;yogurt,whole milk,0.011,0.5352,2.0572,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000830
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000831
+margarine;other vegetables,whole milk,0.0107,0.5211,2.003,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000832
+butter;other vegetables,whole milk,0.0121,0.5724,2.2002,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000833
+root vegetables;tropical fruit,other vegetables,0.0113,0.5493,2.8517,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000834
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000835
+root vegetables;tropical fruit,whole milk,0.0113,0.5493,2.1113,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000836
+rolls/buns;root vegetables,whole milk,0.0137,0.5562,2.1379,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000837
+curd;yogurt,whole milk,0.01,0.5798,2.2287,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000838
+other vegetables;domestic eggs,whole milk,0.0122,0.5283,2.0306,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000839
+other vegetables;frozen vegetables,whole milk,0.0103,0.5917,2.2742,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000840
+other vegetables;whipped/sour cream,whole milk,0.0138,0.5053,1.9423,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000841
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.5,1.5,s0.01_c0.5_l1.5,apriori_all_000842
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.6,0.5,s0.01_c0.6_l0.5,apriori_all_000843
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.6,1.0,s0.01_c0.6_l1.0,apriori_all_000844
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.6,1.2,s0.01_c0.6_l1.2,apriori_all_000845
+other vegetables;curd,whole milk,0.0103,0.6174,2.373,3,0.01,0.6,1.5,s0.01_c0.6_l1.5,apriori_all_000846
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000847
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000848
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000849
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000850
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000851
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000852
+newspapers,whole milk,0.0289,0.3625,1.3932,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000853
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000854
+fruit/vegetable juice,whole milk,0.028,0.3697,1.4211,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000855
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000856
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000857
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000858
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000859
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000860
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000861
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000862
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000863
+pastry,whole milk,0.035,0.3887,1.4941,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000864
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000865
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000866
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000867
+frankfurter,whole milk,0.0209,0.3504,1.3467,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000868
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000869
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000870
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000871
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000872
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000873
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000874
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000875
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000876
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000877
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000878
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000879
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000880
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000881
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000882
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000883
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.3,0.5,s0.02_c0.3_l0.5,apriori_all_000884
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000885
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000886
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000887
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000888
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000889
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000890
+newspapers,whole milk,0.0289,0.3625,1.3932,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000891
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000892
+fruit/vegetable juice,whole milk,0.028,0.3697,1.4211,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000893
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000894
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000895
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000896
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000897
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000898
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000899
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000900
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000901
+pastry,whole milk,0.035,0.3887,1.4941,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000902
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000903
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000904
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000905
+frankfurter,whole milk,0.0209,0.3504,1.3467,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000906
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000907
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000908
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000909
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000910
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000911
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000912
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000913
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000914
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000915
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000916
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000917
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000918
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000919
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000920
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000921
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.3,1.0,s0.02_c0.3_l1.0,apriori_all_000922
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000923
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000924
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000925
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000926
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000927
+newspapers,whole milk,0.0289,0.3625,1.3932,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000928
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000929
+fruit/vegetable juice,whole milk,0.028,0.3697,1.4211,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000930
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000931
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000932
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000933
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000934
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000935
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000936
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000937
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000938
+pastry,whole milk,0.035,0.3887,1.4941,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000939
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000940
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000941
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000942
+frankfurter,whole milk,0.0209,0.3504,1.3467,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000943
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000944
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000945
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000946
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000947
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000948
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000949
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000950
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000951
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000952
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000953
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000954
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000955
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000956
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000957
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000958
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.3,1.2,s0.02_c0.3_l1.2,apriori_all_000959
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000960
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000961
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000962
+margarine,other vegetables,0.0206,0.3389,1.7594,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000963
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000964
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000965
+pip fruit,whole milk,0.0289,0.3933,1.5116,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000966
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000967
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000968
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000969
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000970
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000971
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000972
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000973
+butter,other vegetables,0.0211,0.3796,1.9706,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000974
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000975
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000976
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000977
+pork,other vegetables,0.0205,0.3672,1.9063,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000978
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000979
+pip fruit,other vegetables,0.0247,0.336,1.7442,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000980
+domestic eggs,other vegetables,0.0231,0.3614,1.876,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000981
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000982
+whipped/sour cream,other vegetables,0.0273,0.3868,2.0083,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000983
+citrus fruit,other vegetables,0.0289,0.3384,1.757,2,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000984
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000985
+whole milk;yogurt,other vegetables,0.0225,0.3964,2.058,3,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000986
+other vegetables;whole milk,root vegetables,0.0228,0.3031,2.8119,3,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000987
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000988
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.3,1.5,s0.02_c0.3_l1.5,apriori_all_000989
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000990
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000991
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000992
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000993
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000994
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000995
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000996
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000997
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000998
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_000999
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_001000
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_001001
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_001002
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_001003
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_001004
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.4,0.5,s0.02_c0.4_l0.5,apriori_all_001005
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001006
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001007
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001008
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001009
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001010
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001011
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001012
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001013
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001014
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001015
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001016
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001017
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001018
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001019
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001020
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.4,1.0,s0.02_c0.4_l1.0,apriori_all_001021
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001022
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001023
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001024
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001025
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001026
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001027
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001028
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001029
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001030
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001031
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001032
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001033
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001034
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001035
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001036
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.4,1.2,s0.02_c0.4_l1.2,apriori_all_001037
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001038
+brown bread,whole milk,0.0263,0.4058,1.5599,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001039
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001040
+pork,whole milk,0.0225,0.4036,1.5515,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001041
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001042
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001043
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001044
+domestic eggs,whole milk,0.0289,0.4523,1.7384,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001045
+margarine,whole milk,0.0259,0.4248,1.6329,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001046
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001047
+beef,whole milk,0.0221,0.4282,1.6457,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001048
+curd,whole milk,0.0264,0.4919,1.8907,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001049
+frozen vegetables,whole milk,0.0222,0.465,1.7875,2,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001050
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001051
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001052
+whole milk;root vegetables,other vegetables,0.0228,0.4659,2.4186,3,0.02,0.4,1.5,s0.02_c0.4_l1.5,apriori_all_001053
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.5,0.5,s0.02_c0.5_l0.5,apriori_all_001054
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.5,0.5,s0.02_c0.5_l0.5,apriori_all_001055
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.5,0.5,s0.02_c0.5_l0.5,apriori_all_001056
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.5,1.0,s0.02_c0.5_l1.0,apriori_all_001057
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.5,1.0,s0.02_c0.5_l1.0,apriori_all_001058
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.5,1.0,s0.02_c0.5_l1.0,apriori_all_001059
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.5,1.2,s0.02_c0.5_l1.2,apriori_all_001060
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.5,1.2,s0.02_c0.5_l1.2,apriori_all_001061
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.5,1.2,s0.02_c0.5_l1.2,apriori_all_001062
+butter,whole milk,0.028,0.5052,1.942,2,0.02,0.5,1.5,s0.02_c0.5_l1.5,apriori_all_001063
+other vegetables;yogurt,whole milk,0.0225,0.5201,1.9992,3,0.02,0.5,1.5,s0.02_c0.5_l1.5,apriori_all_001064
+other vegetables;root vegetables,whole milk,0.0228,0.5032,1.9342,3,0.02,0.5,1.5,s0.02_c0.5_l1.5,apriori_all_001065
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001066
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001067
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001068
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001069
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001070
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001071
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001072
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001073
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001074
+pastry,whole milk,0.035,0.3887,1.4941,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001075
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001076
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001077
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001078
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.03,0.3,0.5,s0.03_c0.3_l0.5,apriori_all_001079
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001080
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001081
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001082
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001083
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001084
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001085
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001086
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001087
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001088
+pastry,whole milk,0.035,0.3887,1.4941,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001089
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001090
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001091
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001092
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.03,0.3,1.0,s0.03_c0.3_l1.0,apriori_all_001093
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001094
+citrus fruit,whole milk,0.032,0.3741,1.4381,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001095
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001096
+bottled water,whole milk,0.0349,0.3141,1.2074,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001097
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001098
+sausage,whole milk,0.0321,0.3405,1.3089,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001099
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001100
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001101
+pastry,whole milk,0.035,0.3887,1.4941,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001102
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001103
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001104
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001105
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.03,0.3,1.2,s0.03_c0.3_l1.2,apriori_all_001106
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001107
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001108
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001109
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001110
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001111
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001112
+sausage,rolls/buns,0.0304,0.322,1.736,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001113
+yogurt,other vegetables,0.0433,0.3066,1.5916,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001114
+tropical fruit,other vegetables,0.0352,0.3338,1.7329,2,0.03,0.3,1.5,s0.03_c0.3_l1.5,apriori_all_001115
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.4,0.5,s0.03_c0.4_l0.5,apriori_all_001116
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.4,0.5,s0.03_c0.4_l0.5,apriori_all_001117
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.4,0.5,s0.03_c0.4_l0.5,apriori_all_001118
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.4,0.5,s0.03_c0.4_l0.5,apriori_all_001119
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.4,0.5,s0.03_c0.4_l0.5,apriori_all_001120
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.4,1.0,s0.03_c0.4_l1.0,apriori_all_001121
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.4,1.0,s0.03_c0.4_l1.0,apriori_all_001122
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.4,1.0,s0.03_c0.4_l1.0,apriori_all_001123
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.4,1.0,s0.03_c0.4_l1.0,apriori_all_001124
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.4,1.0,s0.03_c0.4_l1.0,apriori_all_001125
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.4,1.2,s0.03_c0.4_l1.2,apriori_all_001126
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.4,1.2,s0.03_c0.4_l1.2,apriori_all_001127
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.4,1.2,s0.03_c0.4_l1.2,apriori_all_001128
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.4,1.2,s0.03_c0.4_l1.2,apriori_all_001129
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.4,1.2,s0.03_c0.4_l1.2,apriori_all_001130
+tropical fruit,whole milk,0.0423,0.4014,1.5428,2,0.03,0.4,1.5,s0.03_c0.4_l1.5,apriori_all_001131
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.03,0.4,1.5,s0.03_c0.4_l1.5,apriori_all_001132
+root vegetables,other vegetables,0.0453,0.4205,2.183,2,0.03,0.4,1.5,s0.03_c0.4_l1.5,apriori_all_001133
+root vegetables,whole milk,0.049,0.4542,1.7457,2,0.03,0.4,1.5,s0.03_c0.4_l1.5,apriori_all_001134
+whipped/sour cream,whole milk,0.0324,0.4588,1.7637,2,0.03,0.4,1.5,s0.03_c0.4_l1.5,apriori_all_001135
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.05,0.3,0.5,s0.05_c0.3_l0.5,apriori_all_001136
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.05,0.3,0.5,s0.05_c0.3_l0.5,apriori_all_001137
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.3,0.5,s0.05_c0.3_l0.5,apriori_all_001138
+rolls/buns,whole milk,0.0569,0.307,1.1799,2,0.05,0.3,1.0,s0.05_c0.3_l1.0,apriori_all_001139
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.05,0.3,1.0,s0.05_c0.3_l1.0,apriori_all_001140
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.3,1.0,s0.05_c0.3_l1.0,apriori_all_001141
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.05,0.3,1.2,s0.05_c0.3_l1.2,apriori_all_001142
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.3,1.2,s0.05_c0.3_l1.2,apriori_all_001143
+other vegetables,whole milk,0.0752,0.3906,1.5015,2,0.05,0.3,1.5,s0.05_c0.3_l1.5,apriori_all_001144
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.3,1.5,s0.05_c0.3_l1.5,apriori_all_001145
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.4,0.5,s0.05_c0.4_l0.5,apriori_all_001146
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.4,1.0,s0.05_c0.4_l1.0,apriori_all_001147
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.4,1.2,s0.05_c0.4_l1.2,apriori_all_001148
+yogurt,whole milk,0.0568,0.4023,1.5462,2,0.05,0.4,1.5,s0.05_c0.4_l1.5,apriori_all_001149

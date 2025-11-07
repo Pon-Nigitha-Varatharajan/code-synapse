@@ -1,1 +1,7 @@
-[["milk", "bread", "eggs"]]
+[
+  ["whole milk", "yogurt", "tropical fruit", "cereal"],
+  ["rolls/buns", "butter", "jam"],
+  ["root vegetables", "other vegetables", "bottled water", "chicken"],
+  ["soda", "chips", "chocolate", "waffles"],
+  ["beef", "whole milk", "frozen dessert"]
+]
