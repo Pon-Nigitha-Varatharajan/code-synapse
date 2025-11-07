@@ -10,11 +10,11 @@ Auto-generated Product Recommender
 apriori_rules = [
   {
     "if": [
-      "other vegetables",
+      "bottled water",
       "root vegetables"
     ],
     "then": [
-      "bottled water"
+      "other vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -37,40 +37,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "root vegetables"
-    ],
-    "then": [
-      "other vegetables",
-      "bottled water",
-      "chicken"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "chicken"
-    ],
-    "then": [
-      "other vegetables",
-      "bottled water",
-      "root vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
       "bottled water"
     ],
     "then": [
       "other vegetables",
-      "chicken",
-      "root vegetables"
+      "root vegetables",
+      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -83,8 +55,8 @@ apriori_rules = [
     ],
     "then": [
       "bottled water",
-      "chicken",
-      "root vegetables"
+      "root vegetables",
+      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -93,15 +65,31 @@ apriori_rules = [
   },
   {
     "if": [
-      "chocolate"
+      "root vegetables"
     ],
     "then": [
-      "chips"
+      "bottled water",
+      "other vegetables",
+      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
     "lift": 5.0,
-    "itemset_size": 2
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "chicken"
+    ],
+    "then": [
+      "bottled water",
+      "root vegetables",
+      "other vegetables"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
   },
   {
     "if": [
@@ -120,6 +108,18 @@ apriori_rules = [
       "chocolate"
     ],
     "then": [
+      "chips"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "chocolate"
+    ],
+    "then": [
       "soda"
     ],
     "support": 0.2,
@@ -141,18 +141,6 @@ apriori_rules = [
   },
   {
     "if": [
-      "soda"
-    ],
-    "then": [
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
       "chips"
     ],
     "then": [
@@ -165,11 +153,36 @@ apriori_rules = [
   },
   {
     "if": [
-      "chocolate",
       "soda"
     ],
     "then": [
       "chips"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "chips",
+      "chocolate"
+    ],
+    "then": [
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chips",
+      "soda"
+    ],
+    "then": [
+      "chocolate"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -179,48 +192,9 @@ apriori_rules = [
   {
     "if": [
       "chocolate",
-      "chips"
-    ],
-    "then": [
-      "soda"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "soda",
-      "chips"
-    ],
-    "then": [
-      "chocolate"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chocolate"
-    ],
-    "then": [
-      "soda",
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
       "soda"
     ],
     "then": [
-      "chocolate",
       "chips"
     ],
     "support": 0.2,
@@ -235,6 +209,32 @@ apriori_rules = [
     "then": [
       "chocolate",
       "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chocolate"
+    ],
+    "then": [
+      "chips",
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "soda"
+    ],
+    "then": [
+      "chips",
+      "chocolate"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -255,12 +255,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "bottled water",
-      "other vegetables"
+      "root vegetables",
+      "chicken"
     ],
     "then": [
-      "chicken",
-      "root vegetables"
+      "bottled water",
+      "other vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -269,12 +269,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "bottled water",
-      "chicken"
-    ],
-    "then": [
       "other vegetables",
       "root vegetables"
+    ],
+    "then": [
+      "bottled water",
+      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -295,12 +295,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "other vegetables",
-      "root vegetables"
-    ],
-    "then": [
       "bottled water",
       "chicken"
+    ],
+    "then": [
+      "other vegetables",
+      "root vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -310,19 +310,6 @@ apriori_rules = [
   {
     "if": [
       "bottled water",
-      "root vegetables"
-    ],
-    "then": [
-      "other vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "bottled water",
       "other vegetables"
     ],
     "then": [
@@ -335,11 +322,11 @@ apriori_rules = [
   },
   {
     "if": [
+      "other vegetables",
       "root vegetables"
     ],
     "then": [
-      "bottled water",
-      "other vegetables"
+      "bottled water"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -374,11 +361,11 @@ apriori_rules = [
   },
   {
     "if": [
-      "bottled water",
-      "chicken"
+      "root vegetables"
     ],
     "then": [
-      "root vegetables"
+      "bottled water",
+      "other vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -392,6 +379,19 @@ apriori_rules = [
     ],
     "then": [
       "chicken"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "bottled water",
+      "chicken"
+    ],
+    "then": [
+      "root vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -426,19 +426,6 @@ apriori_rules = [
   },
   {
     "if": [
-      "chicken"
-    ],
-    "then": [
-      "bottled water",
-      "root vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
       "root vegetables"
     ],
     "then": [
@@ -452,9 +439,50 @@ apriori_rules = [
   },
   {
     "if": [
+      "chicken"
+    ],
+    "then": [
       "bottled water",
-      "chicken",
       "root vegetables"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "bottled water",
+      "root vegetables",
+      "other vegetables"
+    ],
+    "then": [
+      "chicken"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "bottled water",
+      "other vegetables",
+      "chicken"
+    ],
+    "then": [
+      "root vegetables"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "bottled water",
+      "root vegetables",
+      "chicken"
     ],
     "then": [
       "other vegetables"
@@ -467,8 +495,8 @@ apriori_rules = [
   {
     "if": [
       "other vegetables",
-      "chicken",
-      "root vegetables"
+      "root vegetables",
+      "chicken"
     ],
     "then": [
       "bottled water"
@@ -480,40 +508,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "other vegetables",
-      "bottled water",
-      "root vegetables"
-    ],
-    "then": [
-      "chicken"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "other vegetables",
-      "bottled water",
-      "chicken"
-    ],
-    "then": [
-      "root vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "chicken",
-      "root vegetables"
-    ],
-    "then": [
       "bottled water",
       "other vegetables"
+    ],
+    "then": [
+      "root vegetables",
+      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -560,11 +560,11 @@ apriori_rules = [
   },
   {
     "if": [
-      "chicken"
+      "root vegetables"
     ],
     "then": [
       "other vegetables",
-      "root vegetables"
+      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -573,12 +573,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "soda",
+      "chips",
       "chocolate",
       "waffles"
     ],
     "then": [
-      "chips"
+      "soda"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -587,9 +587,9 @@ apriori_rules = [
   },
   {
     "if": [
-      "soda",
+      "chips",
       "waffles",
-      "chips"
+      "soda"
     ],
     "then": [
       "chocolate"
@@ -601,25 +601,11 @@ apriori_rules = [
   },
   {
     "if": [
-      "chocolate",
       "soda",
-      "chips"
-    ],
-    "then": [
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
       "chocolate",
       "waffles"
     ],
     "then": [
-      "soda",
       "chips"
     ],
     "support": 0.2,
@@ -629,25 +615,53 @@ apriori_rules = [
   },
   {
     "if": [
-      "soda",
-      "waffles"
+      "chips",
+      "chocolate"
     ],
     "then": [
-      "chocolate",
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
       "waffles",
-      "chips"
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "chips",
+      "waffles"
     ],
     "then": [
       "chocolate",
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "chips",
+      "soda"
+    ],
+    "then": [
+      "chocolate",
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "chocolate",
+      "waffles"
+    ],
+    "then": [
+      "chips",
       "soda"
     ],
     "support": 0.2,
@@ -661,8 +675,22 @@ apriori_rules = [
       "soda"
     ],
     "then": [
+      "chips",
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
       "waffles",
-      "chips"
+      "soda"
+    ],
+    "then": [
+      "chips",
+      "chocolate"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -671,40 +699,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "chocolate",
       "chips"
     ],
     "then": [
       "soda",
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "soda",
-      "chips"
-    ],
-    "then": [
       "chocolate",
       "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "waffles"
-    ],
-    "then": [
-      "chocolate",
-      "soda",
-      "chips"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -716,9 +716,23 @@ apriori_rules = [
       "chocolate"
     ],
     "then": [
-      "soda",
+      "chips",
       "waffles",
-      "chips"
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "waffles"
+    ],
+    "then": [
+      "chips",
+      "chocolate",
+      "soda"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -730,21 +744,7 @@ apriori_rules = [
       "soda"
     ],
     "then": [
-      "chocolate",
-      "waffles",
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "chips"
-    ],
-    "then": [
-      "soda",
+      "chips",
       "chocolate",
       "waffles"
     ],
@@ -779,8 +779,8 @@ apriori_rules = [
   },
   {
     "if": [
-      "frozen dessert",
-      "whole milk"
+      "whole milk",
+      "frozen dessert"
     ],
     "then": [
       "beef"
@@ -818,12 +818,12 @@ apriori_rules = [
   },
   {
     "if": [
+      "chips",
       "chocolate",
-      "waffles",
-      "chips"
+      "soda"
     ],
     "then": [
-      "soda"
+      "waffles"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -832,10 +832,35 @@ apriori_rules = [
   },
   {
     "if": [
+      "waffles"
+    ],
+    "then": [
+      "chips",
+      "chocolate"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
       "chips"
     ],
     "then": [
-      "chocolate",
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "chocolate"
+    ],
+    "then": [
+      "chips",
       "waffles"
     ],
     "support": 0.2,
@@ -857,31 +882,6 @@ apriori_rules = [
   },
   {
     "if": [
-      "waffles"
-    ],
-    "then": [
-      "chocolate",
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chips"
-    ],
-    "then": [
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
       "chocolate",
       "waffles"
     ],
@@ -895,164 +895,8 @@ apriori_rules = [
   },
   {
     "if": [
-      "soda",
-      "waffles"
-    ],
-    "then": [
-      "chocolate"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
       "chocolate",
       "soda"
-    ],
-    "then": [
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "waffles"
-    ],
-    "then": [
-      "chocolate",
-      "soda"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chocolate"
-    ],
-    "then": [
-      "soda",
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "soda"
-    ],
-    "then": [
-      "chocolate",
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "soda",
-      "waffles"
-    ],
-    "then": [
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "waffles",
-      "chips"
-    ],
-    "then": [
-      "soda"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "soda",
-      "chips"
-    ],
-    "then": [
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "waffles"
-    ],
-    "then": [
-      "soda",
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "soda"
-    ],
-    "then": [
-      "waffles",
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chips"
-    ],
-    "then": [
-      "soda",
-      "waffles"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chocolate",
-      "waffles"
-    ],
-    "then": [
-      "chips"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chocolate",
-      "chips"
     ],
     "then": [
       "waffles"
@@ -1065,7 +909,7 @@ apriori_rules = [
   {
     "if": [
       "waffles",
-      "chips"
+      "soda"
     ],
     "then": [
       "chocolate"
@@ -1081,6 +925,71 @@ apriori_rules = [
     ],
     "then": [
       "waffles",
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "waffles"
+    ],
+    "then": [
+      "chocolate",
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "soda"
+    ],
+    "then": [
+      "chocolate",
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chips",
+      "waffles"
+    ],
+    "then": [
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chips",
+      "soda"
+    ],
+    "then": [
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "waffles",
+      "soda"
+    ],
+    "then": [
       "chips"
     ],
     "support": 0.2,
@@ -1090,10 +999,101 @@ apriori_rules = [
   },
   {
     "if": [
-      "other vegetables"
+      "chips"
     ],
     "then": [
-      "chicken",
+      "waffles",
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "waffles"
+    ],
+    "then": [
+      "chips",
+      "soda"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "soda"
+    ],
+    "then": [
+      "chips",
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chips",
+      "chocolate"
+    ],
+    "then": [
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chips",
+      "waffles"
+    ],
+    "then": [
+      "chocolate"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chocolate",
+      "waffles"
+    ],
+    "then": [
+      "chips"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chips"
+    ],
+    "then": [
+      "chocolate",
+      "waffles"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "chicken"
+    ],
+    "then": [
+      "other vegetables",
       "root vegetables"
     ],
     "support": 0.2,
@@ -1106,8 +1106,8 @@ apriori_rules = [
       "beef"
     ],
     "then": [
-      "frozen dessert",
-      "whole milk"
+      "whole milk",
+      "frozen dessert"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1116,10 +1116,10 @@ apriori_rules = [
   },
   {
     "if": [
-      "root vegetables"
+      "other vegetables"
     ],
     "then": [
-      "other vegetables",
+      "root vegetables",
       "chicken"
     ],
     "support": 0.2,
@@ -1129,12 +1129,12 @@ apriori_rules = [
   },
   {
     "if": [
-      "tropical fruit"
+      "whole milk",
+      "cereal",
+      "yogurt"
     ],
     "then": [
-      "yogurt",
-      "whole milk",
-      "cereal"
+      "tropical fruit"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1143,34 +1143,8 @@ apriori_rules = [
   },
   {
     "if": [
-      "tropical fruit"
-    ],
-    "then": [
       "whole milk",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "cereal"
-    ],
-    "then": [
-      "tropical fruit",
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt",
-      "whole milk"
+      "yogurt"
     ],
     "then": [
       "tropical fruit"
@@ -1182,8 +1156,8 @@ apriori_rules = [
   },
   {
     "if": [
-      "tropical fruit",
-      "whole milk"
+      "whole milk",
+      "tropical fruit"
     ],
     "then": [
       "yogurt"
@@ -1195,11 +1169,23 @@ apriori_rules = [
   },
   {
     "if": [
+      "cereal"
+    ],
+    "then": [
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
       "yogurt"
     ],
     "then": [
-      "tropical fruit",
-      "whole milk"
+      "whole milk",
+      "tropical fruit"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1211,8 +1197,8 @@ apriori_rules = [
       "tropical fruit"
     ],
     "then": [
-      "yogurt",
-      "whole milk"
+      "whole milk",
+      "yogurt"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1221,9 +1207,9 @@ apriori_rules = [
   },
   {
     "if": [
-      "yogurt",
+      "whole milk",
       "tropical fruit",
-      "whole milk"
+      "yogurt"
     ],
     "then": [
       "cereal"
@@ -1235,390 +1221,37 @@ apriori_rules = [
   },
   {
     "if": [
-      "yogurt",
+      "whole milk",
+      "tropical fruit",
+      "cereal"
+    ],
+    "then": [
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "tropical fruit"
+    ],
+    "then": [
       "whole milk",
       "cereal"
     ],
-    "then": [
-      "tropical fruit"
-    ],
     "support": 0.2,
     "confidence": 1.0,
     "lift": 5.0,
-    "itemset_size": 4
+    "itemset_size": 3
   },
   {
     "if": [
-      "other vegetables",
+      "root vegetables",
       "chicken"
     ],
     "then": [
-      "root vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt",
-      "tropical fruit"
-    ],
-    "then": [
-      "whole milk",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "yogurt",
-      "whole milk"
-    ],
-    "then": [
-      "tropical fruit",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "yogurt",
-      "cereal"
-    ],
-    "then": [
-      "tropical fruit",
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "tropical fruit",
-      "whole milk"
-    ],
-    "then": [
-      "yogurt",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "tropical fruit",
-      "cereal"
-    ],
-    "then": [
-      "yogurt",
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "whole milk",
-      "cereal"
-    ],
-    "then": [
-      "yogurt",
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "whole milk",
-      "cereal"
-    ],
-    "then": [
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "tropical fruit",
-      "whole milk"
-    ],
-    "then": [
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "cereal"
-    ],
-    "then": [
-      "yogurt",
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "tropical fruit"
-    ],
-    "then": [
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "yogurt"
-    ],
-    "then": [
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "cereal"
-    ],
-    "then": [
-      "yogurt"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "yogurt",
-      "whole milk"
-    ],
-    "then": [
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "whole milk",
-      "cereal"
-    ],
-    "then": [
-      "yogurt"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt"
-    ],
-    "then": [
-      "whole milk",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "cereal"
-    ],
-    "then": [
-      "yogurt",
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "cereal"
-    ],
-    "then": [
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "tropical fruit"
-    ],
-    "then": [
-      "yogurt",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt"
-    ],
-    "then": [
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "tropical fruit"
-    ],
-    "then": [
-      "yogurt"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "yogurt",
-      "tropical fruit"
-    ],
-    "then": [
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt",
-      "cereal"
-    ],
-    "then": [
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "tropical fruit",
-      "cereal"
-    ],
-    "then": [
-      "yogurt"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt"
-    ],
-    "then": [
-      "tropical fruit",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt"
-    ],
-    "then": [
-      "tropical fruit",
-      "whole milk",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "tropical fruit",
-      "whole milk",
-      "cereal"
-    ],
-    "then": [
-      "yogurt"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "bottled water",
-      "other vegetables"
-    ],
-    "then": [
-      "chicken"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chicken"
-    ],
-    "then": [
-      "bottled water",
       "other vegetables"
     ],
     "support": 0.2,
@@ -1628,10 +1261,120 @@ apriori_rules = [
   },
   {
     "if": [
-      "bottled water"
+      "whole milk",
+      "yogurt"
     ],
     "then": [
-      "other vegetables"
+      "tropical fruit",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "whole milk",
+      "tropical fruit"
+    ],
+    "then": [
+      "yogurt",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "whole milk",
+      "cereal"
+    ],
+    "then": [
+      "yogurt",
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "yogurt",
+      "tropical fruit"
+    ],
+    "then": [
+      "whole milk",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "yogurt",
+      "cereal"
+    ],
+    "then": [
+      "whole milk",
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "cereal"
+    ],
+    "then": [
+      "whole milk",
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "whole milk",
+      "cereal"
+    ],
+    "then": [
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "tropical fruit"
+    ],
+    "then": [
+      "whole milk",
+      "cereal",
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "yogurt"
+    ],
+    "then": [
+      "tropical fruit"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1640,15 +1383,224 @@ apriori_rules = [
   },
   {
     "if": [
-      "other vegetables"
+      "whole milk",
+      "cereal"
     ],
     "then": [
-      "bottled water"
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "yogurt"
+    ],
+    "then": [
+      "whole milk",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "yogurt",
+      "whole milk"
+    ],
+    "then": [
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "cereal"
+    ],
+    "then": [
+      "yogurt",
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "tropical fruit"
+    ],
+    "then": [
+      "cereal"
     ],
     "support": 0.2,
     "confidence": 1.0,
     "lift": 5.0,
     "itemset_size": 2
+  },
+  {
+    "if": [
+      "cereal"
+    ],
+    "then": [
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "tropical fruit"
+    ],
+    "then": [
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "whole milk",
+      "tropical fruit"
+    ],
+    "then": [
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "yogurt",
+      "tropical fruit"
+    ],
+    "then": [
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "yogurt",
+      "cereal"
+    ],
+    "then": [
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "tropical fruit",
+      "cereal"
+    ],
+    "then": [
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "yogurt"
+    ],
+    "then": [
+      "tropical fruit",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "tropical fruit"
+    ],
+    "then": [
+      "yogurt",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "cereal"
+    ],
+    "then": [
+      "yogurt",
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "yogurt"
+    ],
+    "then": [
+      "whole milk",
+      "tropical fruit",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "tropical fruit",
+      "cereal"
+    ],
+    "then": [
+      "whole milk",
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "cereal"
+    ],
+    "then": [
+      "whole milk",
+      "tropical fruit",
+      "yogurt"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 4
   },
   {
     "if": [
@@ -1665,17 +1617,76 @@ apriori_rules = [
   },
   {
     "if": [
-      "cereal"
+      "chicken"
     ],
     "then": [
-      "yogurt",
-      "tropical fruit",
-      "whole milk"
+      "other vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
     "lift": 5.0,
-    "itemset_size": 4
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "bottled water"
+    ],
+    "then": [
+      "other vegetables"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "jam"
+    ],
+    "then": [
+      "butter"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "root vegetables"
+    ],
+    "then": [
+      "bottled water"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "other vegetables"
+    ],
+    "then": [
+      "bottled water"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "bottled water",
+      "other vegetables"
+    ],
+    "then": [
+      "chicken"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
   },
   {
     "if": [
@@ -1689,6 +1700,18 @@ apriori_rules = [
     "confidence": 1.0,
     "lift": 5.0,
     "itemset_size": 3
+  },
+  {
+    "if": [
+      "root vegetables"
+    ],
+    "then": [
+      "chicken"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
   },
   {
     "if": [
@@ -1721,24 +1744,13 @@ apriori_rules = [
       "chicken"
     ],
     "then": [
-      "bottled water"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "root vegetables"
-    ],
-    "then": [
+      "bottled water",
       "other vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
     "lift": 5.0,
-    "itemset_size": 2
+    "itemset_size": 3
   },
   {
     "if": [
@@ -1746,30 +1758,6 @@ apriori_rules = [
     ],
     "then": [
       "root vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "chicken"
-    ],
-    "then": [
-      "root vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "root vegetables"
-    ],
-    "then": [
-      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1790,7 +1778,31 @@ apriori_rules = [
   },
   {
     "if": [
+      "chicken"
+    ],
+    "then": [
       "root vegetables"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "other vegetables"
+    ],
+    "then": [
+      "chicken"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "chicken"
     ],
     "then": [
       "bottled water"
@@ -1802,7 +1814,7 @@ apriori_rules = [
   },
   {
     "if": [
-      "other vegetables"
+      "bottled water"
     ],
     "then": [
       "chicken"
@@ -1814,147 +1826,24 @@ apriori_rules = [
   },
   {
     "if": [
-      "chicken"
+      "other vegetables",
+      "root vegetables"
     ],
     "then": [
-      "other vegetables"
+      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
     "lift": 5.0,
-    "itemset_size": 2
+    "itemset_size": 3
   },
   {
     "if": [
-      "butter",
       "rolls/buns"
     ],
     "then": [
-      "jam"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
       "jam",
-      "rolls/buns"
-    ],
-    "then": [
       "butter"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "butter"
-    ],
-    "then": [
-      "jam"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "jam"
-    ],
-    "then": [
-      "butter"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "jam"
-    ],
-    "then": [
-      "rolls/buns"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "rolls/buns"
-    ],
-    "then": [
-      "jam"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "butter"
-    ],
-    "then": [
-      "rolls/buns"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "rolls/buns"
-    ],
-    "then": [
-      "butter"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "butter",
-      "jam"
-    ],
-    "then": [
-      "rolls/buns"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "chicken",
-      "root vegetables"
-    ],
-    "then": [
-      "other vegetables"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 5.0,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "other vegetables",
-      "root vegetables"
-    ],
-    "then": [
-      "chicken"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1979,8 +1868,8 @@ apriori_rules = [
       "jam"
     ],
     "then": [
-      "butter",
-      "rolls/buns"
+      "rolls/buns",
+      "butter"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -1989,10 +1878,10 @@ apriori_rules = [
   },
   {
     "if": [
-      "rolls/buns"
+      "rolls/buns",
+      "butter"
     ],
     "then": [
-      "butter",
       "jam"
     ],
     "support": 0.2,
@@ -2002,10 +1891,121 @@ apriori_rules = [
   },
   {
     "if": [
-      "bottled water"
+      "jam",
+      "rolls/buns"
     ],
     "then": [
+      "butter"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "jam",
+      "butter"
+    ],
+    "then": [
+      "rolls/buns"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "butter"
+    ],
+    "then": [
+      "rolls/buns"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "rolls/buns"
+    ],
+    "then": [
+      "butter"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "rolls/buns"
+    ],
+    "then": [
+      "jam"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "jam"
+    ],
+    "then": [
+      "rolls/buns"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "butter"
+    ],
+    "then": [
+      "jam"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "yogurt"
+    ],
+    "then": [
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "other vegetables",
       "chicken"
+    ],
+    "then": [
+      "root vegetables"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 5.0,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "root vegetables"
+    ],
+    "then": [
+      "other vegetables"
     ],
     "support": 0.2,
     "confidence": 1.0,
@@ -2017,56 +2017,6 @@ apriori_rules = [
       "whole milk"
     ],
     "then": [
-      "frozen dessert",
-      "beef"
-    ],
-    "support": 0.2,
-    "confidence": 0.5,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "frozen dessert",
-      "beef"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "beef"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "whole milk"
-    ],
-    "then": [
-      "beef"
-    ],
-    "support": 0.2,
-    "confidence": 0.5,
-    "lift": 2.5,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "whole milk"
-    ],
-    "then": [
       "cereal"
     ],
     "support": 0.2,
@@ -2085,6 +2035,43 @@ apriori_rules = [
     "confidence": 1.0,
     "lift": 2.5,
     "itemset_size": 2
+  },
+  {
+    "if": [
+      "whole milk"
+    ],
+    "then": [
+      "beef"
+    ],
+    "support": 0.2,
+    "confidence": 0.5,
+    "lift": 2.5,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "beef"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "frozen dessert",
+      "beef"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 3
   },
   {
     "if": [
@@ -2097,6 +2084,161 @@ apriori_rules = [
     "confidence": 0.5,
     "lift": 2.5,
     "itemset_size": 2
+  },
+  {
+    "if": [
+      "whole milk"
+    ],
+    "then": [
+      "frozen dessert",
+      "beef"
+    ],
+    "support": 0.2,
+    "confidence": 0.5,
+    "lift": 2.5,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "frozen dessert"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "yogurt",
+      "tropical fruit",
+      "cereal"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 4
+  },
+  {
+    "if": [
+      "yogurt",
+      "cereal"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "whole milk"
+    ],
+    "then": [
+      "yogurt",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 0.5,
+    "lift": 2.5,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "whole milk"
+    ],
+    "then": [
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 0.5,
+    "lift": 2.5,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "tropical fruit"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 2
+  },
+  {
+    "if": [
+      "tropical fruit",
+      "cereal"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "whole milk"
+    ],
+    "then": [
+      "tropical fruit",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 0.5,
+    "lift": 2.5,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "yogurt",
+      "tropical fruit"
+    ],
+    "then": [
+      "whole milk"
+    ],
+    "support": 0.2,
+    "confidence": 1.0,
+    "lift": 2.5,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "whole milk"
+    ],
+    "then": [
+      "yogurt",
+      "tropical fruit"
+    ],
+    "support": 0.2,
+    "confidence": 0.5,
+    "lift": 2.5,
+    "itemset_size": 3
+  },
+  {
+    "if": [
+      "whole milk"
+    ],
+    "then": [
+      "yogurt",
+      "tropical fruit",
+      "cereal"
+    ],
+    "support": 0.2,
+    "confidence": 0.5,
+    "lift": 2.5,
+    "itemset_size": 4
   },
   {
     "if": [
@@ -2109,148 +2251,6 @@ apriori_rules = [
     "confidence": 0.5,
     "lift": 2.5,
     "itemset_size": 2
-  },
-  {
-    "if": [
-      "whole milk"
-    ],
-    "then": [
-      "yogurt",
-      "tropical fruit",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 0.5,
-    "lift": 2.5,
-    "itemset_size": 4
-  },
-  {
-    "if": [
-      "frozen dessert"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "yogurt",
-      "cereal"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "whole milk"
-    ],
-    "then": [
-      "yogurt",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 0.5,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "tropical fruit"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "whole milk"
-    ],
-    "then": [
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 0.5,
-    "lift": 2.5,
-    "itemset_size": 2
-  },
-  {
-    "if": [
-      "tropical fruit",
-      "cereal"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "whole milk"
-    ],
-    "then": [
-      "tropical fruit",
-      "cereal"
-    ],
-    "support": 0.2,
-    "confidence": 0.5,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt",
-      "tropical fruit"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "whole milk"
-    ],
-    "then": [
-      "yogurt",
-      "tropical fruit"
-    ],
-    "support": 0.2,
-    "confidence": 0.5,
-    "lift": 2.5,
-    "itemset_size": 3
-  },
-  {
-    "if": [
-      "yogurt",
-      "tropical fruit",
-      "cereal"
-    ],
-    "then": [
-      "whole milk"
-    ],
-    "support": 0.2,
-    "confidence": 1.0,
-    "lift": 2.5,
-    "itemset_size": 4
   },
   {
     "if": [

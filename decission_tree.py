@@ -143,6 +143,20 @@ def classify_segment(features, tree):
         return classify_segment(features, tree["children"][value])
     else:
         return "Unknown"
+def classify_new_basket(basket, tree_model):
+    """
+    basket: list of products purchased by customer
+    tree_model: the trained decision tree
+    returns: predicted segment (leaf node label)
+    """
+    # Step 1: Convert basket into features
+    basket_entry = {"basket": basket}
+    features = extract_features(basket_entry)
+    
+    # Step 2: Classify using decision tree
+    predicted_segment = classify_segment(features, tree_model)
+    
+    return predicted_segment
 
 # -----------------------------------------------------
 # 7️⃣ Build, Evaluate, and Save
@@ -214,3 +228,10 @@ if __name__ == "__main__":
     acc, report, cm, _ = run_evaluation(max_depth=4)
     print(f"\nAccuracy: {acc:.3f}")
     print("Confusion Matrix:\n", cm)
+    # Example customer basket
+    customer_basket = ["milk", "eggs", "bread", "butter"]
+    # Load or build tree_model
+    tree_model = build_decision_tree(max_depth=4)
+    # Classify the basket
+    segment = classify_new_basket(customer_basket, tree_model)
+    print(f"Customer Segment: {segment}")

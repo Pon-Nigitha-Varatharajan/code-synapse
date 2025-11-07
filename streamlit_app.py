@@ -554,18 +554,26 @@ elif selected_tab == "🌳 Decision Tree":
         st.success(f"✅ Loaded {len(X_data)} feature entries for decision tree modeling.")
 
         # Model Configuration
-        st.markdown("#### ⚙️ Model Configuration")
         max_depth = st.slider("Maximum Tree Depth", 2, 5, 3, 
-                            help="Controls the complexity of the decision tree")
-        
+                              help="Controls the complexity of the decision tree")
+
+        # Initialize session_state for tree_model
+        if "tree_model" not in st.session_state:
+            st.session_state.tree_model = None
+
+        # Build Tree Button
         if st.button("🌳 Build Decision Tree", use_container_width=True):
             with st.spinner("Building decision tree model..."):
                 X = [decission_tree.extract_features(d) for d in X_data]
                 y = [decission_tree.label_basket(d) for d in X_data]
                 features = list(X[0].keys())
-                tree_model = decission_tree.build_tree(X, y, features, max_depth=max_depth)
+                st.session_state.tree_model = decission_tree.build_tree(X, y, features, max_depth=max_depth)
+            st.success("✅ Decision tree built successfully!")
 
-            # Display Results
+        # Display Rules & Visualization only if tree exists
+        if st.session_state.tree_model:
+            tree_model = st.session_state.tree_model
+
             st.markdown("#### 📜 Decision Tree Rules")
             with st.expander("View Tree Rules", expanded=True):
                 rules_text = decission_tree.tree_to_rules(tree_model)
@@ -575,9 +583,27 @@ elif selected_tab == "🌳 Decision Tree":
             dot = decission_tree.tree_to_graphviz(tree_model)
             st.graphviz_chart(dot.source)
 
-            # Interactive Prediction
+            # -------------------------------
+            # Interactive Basket Classification
+            # -------------------------------
+            st.markdown("#### 🎯 Classify a New Basket")
+            new_basket_input = st.text_input("Enter products (comma-separated)", "", 
+                                             placeholder="e.g., milk, bread, eggs")
+            
+            if st.button("🛒 Classify Basket"):
+                if new_basket_input.strip():
+                    basket_items = [item.strip() for item in new_basket_input.split(",") if item.strip()]
+                    features = decission_tree.extract_features({"basket": basket_items})
+                    predicted_segment = decission_tree.classify_segment(features, tree_model)
+                    st.success(f"Predicted Customer Segment: **{predicted_segment}**")
+                else:
+                    st.warning("Please enter some products to classify.")
+
+            # -------------------------------
+            # Model Evaluation
+            # -------------------------------
             st.markdown("#### 📊 Model Evaluation")
-            acc, report, cm = run_evaluation(max_depth=max_depth)
+            acc, report, cm = decission_tree.run_evaluation(max_depth=max_depth)
             
             col1, col2 = st.columns(2)
             with col1:
@@ -588,18 +614,19 @@ elif selected_tab == "🌳 Decision Tree":
             st.markdown("##### 📈 Classification Report")
             report_df = pd.DataFrame(report).transpose()
             st.dataframe(report_df.style.background_gradient(cmap="Blues", axis=0), 
-                        use_container_width=True)
+                         use_container_width=True)
             
-            st.markdown("##### 🎯 Confusion Matrix")
+            st.markdown("##### 🎨 Confusion Matrix")
             fig, ax = plt.subplots(figsize=(8, 6))
-            labels = ["Small Basket", "Medium Basket", "Big Basket"]
+            labels = list(set([decission_tree.label_basket(d) for d in X_data]))  # dynamic labels
             sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", 
-                       xticklabels=labels, yticklabels=labels, ax=ax,
-                       cbar_kws={'label': 'Number of Predictions'})
+                        xticklabels=labels, yticklabels=labels, ax=ax,
+                        cbar_kws={'label': 'Number of Predictions'})
             ax.set_xlabel("Predicted Label", fontweight='bold')
             ax.set_ylabel("True Label", fontweight='bold')
             ax.set_title("Confusion Matrix", fontweight='bold', pad=20)
             st.pyplot(fig)
+
     else:
         st.markdown("""
         <div class="warning-card">
@@ -607,6 +634,7 @@ elif selected_tab == "🌳 Decision Tree":
             <p>Please run Feature Engineering first to generate feature matrices.</p>
         </div>
         """, unsafe_allow_html=True)
+    
     st.markdown('</div>', unsafe_allow_html=True)
 
 # -------------------------------
