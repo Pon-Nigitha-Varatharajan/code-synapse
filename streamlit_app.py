@@ -18,6 +18,7 @@ from rule_miner import run_miner
 import decission_tree
 from decission_tree import run_evaluation
 from apriori import run_apriori, find_optimal_thresholds
+import self_evolving_engine 
 
 # Configure page
 st.set_page_config(
@@ -974,25 +975,25 @@ elif selected_tab == "🔮 Product Recommender":
     st.markdown('</div>', unsafe_allow_html=True)
 
 # -------------------------------
-# TAB 7: Self-Evolving Engine
+# TAB 7: Self-Evolving Engine (Optimized)
 # -------------------------------
 elif selected_tab == "🔄 Self-Evolving Engine":
     st.markdown('<div class="tab-container">', unsafe_allow_html=True)
     st.markdown('<h2 class="sub-header">🔄 Self-Evolving Recommendation Engine</h2>', unsafe_allow_html=True)
     
     BASE_DIR = "/Users/ponnigithav/Desktop/code-synapse"
-    NEW_BASKETS_FILE = os.path.join(BASE_DIR, "data", "new_baskets.json")
     OUTPUT_RECOMMENDER = os.path.join(BASE_DIR, "product_recommender.py")
 
     st.markdown("""
     <div class="info-card">
         <strong>🔄 Self-Evolving Engine</strong><br>
-        This module allows you to add new transaction data and automatically update 
-        the recommendation engine with new patterns and rules.
+        Add new transaction data and automatically update the recommendation engine.
     </div>
     """, unsafe_allow_html=True)
 
+    # -------------------
     # Manual Basket Input
+    # -------------------
     st.markdown("#### 📝 Add New Baskets Manually")
     st.write("Enter products separated by commas for each new basket:")
 
@@ -1001,8 +1002,10 @@ elif selected_tab == "🔄 Self-Evolving Engine":
 
     col1, col2 = st.columns([3, 1])
     with col1:
-        new_basket_input = st.text_input("New Basket (comma-separated items)", "",
-                                       placeholder="e.g., milk, bread, eggs, butter")
+        new_basket_input = st.text_input(
+            "New Basket (comma-separated items)", "",
+            placeholder="e.g., milk, bread, eggs, butter"
+        )
     with col2:
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("➕ Add Basket", use_container_width=True):
@@ -1010,75 +1013,70 @@ elif selected_tab == "🔄 Self-Evolving Engine":
                 basket_items = [item.strip() for item in new_basket_input.split(",") if item.strip()]
                 st.session_state.new_baskets.append(basket_items)
                 st.success(f"✅ Added basket: {basket_items}")
-                st.rerun()
 
+    # -------------------
     # Display Pending Baskets
+    # -------------------
     if st.session_state.new_baskets:
-        st.markdown("#### 📋 New Baskets Pending Integration")
+        st.markdown("#### 📋 Pending Baskets")
         for i, basket in enumerate(st.session_state.new_baskets, 1):
             st.write(f"**Basket {i}:** {', '.join(basket)}")
-        
+
         if st.button("🗑️ Clear All Pending Baskets", use_container_width=True):
             st.session_state.new_baskets = []
-            st.rerun()
 
+    # -------------------
     # File Upload Option
+    # -------------------
     st.markdown("---")
     st.markdown("#### 📁 Upload New Baskets File")
-    uploaded_file = st.file_uploader("Upload JSON or CSV file with new transactions", 
-                                   type=["json", "csv"],
-                                   help="JSON: Array of arrays | CSV: Comma-separated items per row")
-    
+    uploaded_file = st.file_uploader(
+        "Upload JSON or CSV file with new transactions", 
+        type=["json", "csv"],
+        help="JSON: Array of arrays | CSV: Comma-separated items per row"
+    )
+
     if uploaded_file:
         try:
             if uploaded_file.type == "application/json":
                 file_baskets = json.load(uploaded_file)
             else:
                 file_baskets = [line.decode("utf-8").strip().split(",") for line in uploaded_file.readlines()]
-            
             st.session_state.new_baskets.extend(file_baskets)
             st.success(f"✅ Loaded {len(file_baskets)} baskets from file.")
-            st.rerun()
         except Exception as e:
             st.error(f"❌ Error reading file: {str(e)}")
 
+    # -------------------
     # Engine Execution
+    # -------------------
     st.markdown("---")
     st.markdown("#### 🚀 Execute Self-Evolving Engine")
-    
+
     if st.session_state.new_baskets:
-        st.info(f"Ready to process {len(st.session_state.new_baskets)} new baskets")
-        
-        if st.button("🤖 Run Self-Evolving Engine", use_container_width=True, type="primary"):
-            with st.spinner("Processing new baskets and updating recommendation engine..."):
-                # Save new baskets
-                os.makedirs(os.path.dirname(NEW_BASKETS_FILE), exist_ok=True)
-                with open(NEW_BASKETS_FILE, "w") as f:
-                    json.dump(st.session_state.new_baskets, f)
+        st.info(f"Ready to process {len(file_baskets)} baskets")
 
-                # Run evolving engine
-                try:
-                    import self_evolving_engine
-                    self_evolving_engine.run_self_evolving_engine_once(st.session_state.new_baskets)
-                    
-                    st.success("✅ Engine successfully updated with new patterns!")
-                    st.balloons()
-                    
-                    # Show summary
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        st.metric("Baskets Processed", len(st.session_state.new_baskets))
-                    with col2:
-                        st.metric("Engine Updated", "✅")
-                    
-                    st.session_state.new_baskets = []
-                    
-                except Exception as e:
-                    st.error(f"❌ Error updating engine: {str(e)}")
+        if st.button("🤖 Run Self-Evolving Engine", use_container_width=True, type="primary"): # import once at runtime
+
+            with st.spinner("Processing baskets and updating recommendation engine..."):
+                # Run engine directly from session_state
+                self_evolving_engine.run_self_evolving_engine_once(st.session_state.new_baskets)
+
+                st.success("✅ Engine updated with new patterns!")
+                st.balloons()
+
+                # Display metrics
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.metric("Baskets Processed",len(file_baskets))
+                with col2:
+                    st.metric("Recommender Updated", "✅")
+
+                # Clear pending baskets
+                st.session_state.new_baskets = []
+
     else:
-        st.info("ℹ️ Add some new baskets manually or upload a file to start the self-evolving process.")
-    
-    st.markdown('</div>', unsafe_allow_html=True)
+        st.info("ℹ️ Add baskets manually or upload a file to start the self-evolving process.")
 
-# Footer
-st.markdown("---")
+    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("---")
