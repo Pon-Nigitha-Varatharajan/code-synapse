@@ -16,8 +16,6 @@ import data_processing
 import feature_engineering
 import eda
 from rule_miner import run_miner
-import decission_tree
-from decission_tree import run_enhanced_evaluation, enhanced_evaluation, calculate_feature_importance
 from apriori import run_apriori, find_optimal_thresholds
 import self_evolving_engine 
 
@@ -729,13 +727,21 @@ elif selected_tab == "🔮 Product Recommender":
             for i, item in enumerate(st.session_state.basket):
                 col_idx = i % 4
                 with basket_cols[col_idx]:
-                    col1, col2 = st.columns([3, 1])
+                    col1, col2 = st.columns([4,1])
                     with col1:
                         st.markdown(f"""
-                        <div style="background: #e3f2fd; padding: 0.5rem; border-radius: 8px; text-align: center; margin: 0.2rem;">
-                            {item}
-                        </div>
-                        """, unsafe_allow_html=True)
+                                <div style="
+                                    background: linear-gradient(135deg, #4b6cb7, #182848);
+                                    color: white;
+                                    padding: 0.6rem;
+                                    border-radius: 10px;
+                                    text-align: center;
+                                    margin: 0.2rem;
+                                    font-weight: 600;
+                                ">
+                                    {item}
+                                </div>
+                                """, unsafe_allow_html=True)
                     with col2:
                         if st.button("❌", key=f"remove_{i}", help=f"Remove {item}"):
                             st.session_state.basket.remove(item)
@@ -889,25 +895,9 @@ elif selected_tab == "🔄 Self-Evolving Engine":
     # -------------------
     # Manual Basket Input
     # -------------------
-    st.markdown("#### 📝 Add New Baskets Manually")
-    st.write("Enter products separated by commas for each new basket:")
 
     if "new_baskets" not in st.session_state:
         st.session_state.new_baskets = []
-
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        new_basket_input = st.text_input(
-            "New Basket (comma-separated items)", "",
-            placeholder="e.g., milk, bread, eggs, butter"
-        )
-    with col2:
-        st.markdown("<br>", unsafe_allow_html=True)
-        if st.button("➕ Add Basket", use_container_width=True):
-            if new_basket_input.strip():
-                basket_items = [item.strip() for item in new_basket_input.split(",") if item.strip()]
-                st.session_state.new_baskets.append(basket_items)
-                st.success(f"✅ Added basket: {basket_items}")
 
     # -------------------
     # Display Pending Baskets
@@ -957,7 +947,7 @@ elif selected_tab == "🔄 Self-Evolving Engine":
                 # Run engine directly from session_state
                 self_evolving_engine.run_self_evolving_engine_once(st.session_state.new_baskets)
 
-                st.success("✅ Engine updated with new patterns!")
+                st.success("✅ Engine updated with new patterns and product_recommender.py code is updated!")
                 st.balloons()
 
                 # Display metrics

@@ -74,6 +74,7 @@ def ascend_fpnode(node):
         path.append(node.item)
     return path[::-1]  # Reverse to get correct order
 
+
 def find_prefix_paths(base_item, header_node):
     """Find all prefix paths for a given item"""
     cond_pats = []
@@ -415,72 +416,65 @@ def save_parameter_summary(all_rules_data, filename="parameter_summary.csv"):
                 })
     
     print(f"Saved parameter summary to {filename}")
-
+def load_transactions_from_csv(file_path):
+    """
+    Load transactions from CSV where each row contains comma-separated items
+    """
+    transactions = []
+    
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            items = [item.strip() for item in line.strip().split(',') if item.strip()]
+            if items:
+                transactions.append(items)
+    
+    print(f"Loaded {len(transactions)} transactions from {file_path}")
+    return transactions
 # ------------------------------
 # Example Usage
 # ------------------------------
 def example_usage():
-    """Example demonstrating FP-Growth with the fix"""
-    transactions = [
-        ['milk', 'bread', 'butter'],
-        ['milk', 'bread'],
-        ['milk', 'eggs'],
-        ['bread', 'butter', 'eggs'],
-        ['milk', 'bread', 'eggs', 'butter'],
-        ['bread', 'eggs'],
-        ['milk', 'eggs'],
-        ['milk', 'bread', 'eggs'],
-        ['milk', 'bread', 'butter'],
-        ['bread', 'butter']
-    ]
+    """Run FP-Growth using real CSV data"""
     
-    train_data = transactions[:7]
-    test_data = transactions[7:]
+    file_path = "your_dataset.csv"   # 👈 change this to your file name
     
-    print("Running FP-Growth with threshold optimization...")
+    # Load data
+    transactions = load_transactions_from_csv(file_path)
+    
+    # Split into train/test (80-20)
+    split_idx = int(0.8 * len(transactions))
+    train_data = transactions[:split_idx]
+    test_data = transactions[split_idx:]
+    
+    print("Running FP-Growth with real dataset...")
+    
     results = find_optimal_thresholds(
         train_baskets=train_data,
         test_baskets=test_data,
-        support_values=[0.1, 0.2],
-        confidence_values=[0.3, 0.5],
-        lift_values=[1.0, 1.5],
+        support_values=[0.01, 0.02, 0.03],
+        confidence_values=[0.3, 0.4, 0.5],
+        lift_values=[1.0, 1.2, 1.5],
         output_csv="optimal_rules.csv",
         save_all_rules=True
     )
     
     if "error" not in results:
         print(f"\n=== OPTIMAL PARAMETERS ===")
-        print(f"Support: {results['optimal_support']}")
-        print(f"Confidence: {results['optimal_confidence']}")
-        print(f"Lift: {results['optimal_lift']}")
-        print(f"Number of optimal rules: {len(results['rules'])}")
-        print(f"Optimal rules saved to: {results['rules_file']}")
+        print(results)
         
-        if results.get('all_rules_file'):
-            print(f"All rules saved to: {results['all_rules_file']}")
+        # Load rules
+        rules = load_rules_from_csv("optimal_rules.csv")
         
-        print(f"Parameter combinations tested: {results['total_parameter_combinations']}")
-        print(f"Successful combinations: {results['successful_combinations']}")
-        
-        # Test recommendations with optimal rules
-        loaded_rules = load_rules_from_csv("optimal_rules.csv")
-        sample_basket = ['milk', 'bread']
-        recommendations = recommend_products(loaded_rules, sample_basket)
+        # Test recommendation
+        sample_basket = transactions[0]   # 👈 use real basket
+        recommendations = recommend_products(rules, sample_basket)
         
         print(f"\n=== RECOMMENDATIONS ===")
         print(f"User basket: {sample_basket}")
-        print("Recommended products:")
+        
         for product, score in recommendations:
-            print(f"  - {product}: {score:.4f}")
-            
-        # Show rules from all parameters
-        try:
-            all_rules = load_rules_from_csv("all_parameter_rules.csv")
-            print(f"\n=== ALL RULES SUMMARY ===")
-            print(f"Total rules from all parameters: {len(all_rules)}")
-        except:
-            print("\nCould not load all rules file")
-            
+            print(f"{product} → {score:.4f}")
+    
     else:
         print(results["error"])
 

@@ -73,6 +73,25 @@ def run_apriori(baskets, min_support, min_confidence, min_lift):
     # Step 3: Generate rules
     rules = generate_rules(all_freq_itemsets, baskets, min_confidence, min_lift)
     return rules
+def load_baskets_from_csv(file_path):
+    baskets = []
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        reader = csv.reader(f)
+
+        for row in reader:
+            # Clean + normalize
+            basket = list(set(
+                item.strip().lower() 
+                for item in row 
+                if item.strip()
+            ))
+
+            if basket:  # avoid empty rows
+                baskets.append(basket)
+
+    return baskets
+
 
 def save_rules_to_csv(rules, filename="apriori_rules.csv", include_params=False, params=None):
     """Save Apriori rules to CSV file"""
@@ -296,64 +315,29 @@ def find_optimal_thresholds(train_baskets, test_baskets,
 
 # Example usage function
 def example_usage():
-    """Example demonstrating Apriori with CSV saving of ALL rules"""
-    # Sample transaction data
-    transactions = [
-        ['milk', 'bread', 'butter'],
-        ['milk', 'bread'],
-        ['milk', 'eggs'],
-        ['bread', 'butter', 'eggs'],
-        ['milk', 'bread', 'eggs', 'butter'],
-        ['bread', 'eggs'],
-        ['milk', 'eggs'],
-        ['milk', 'bread', 'eggs'],
-        ['milk', 'bread', 'butter'],
-        ['bread', 'butter']
-    ]
-    
-    # Split into train/test
-    train_data = transactions[:7]
-    test_data = transactions[7:]
-    
-    print("Running Apriori with threshold optimization...")
+    file_path = "groceries.csv"  # <-- your file
+
+    # Step 1: Load data
+    transactions = load_baskets_from_csv(file_path)
+    print(f"Loaded {len(transactions)} transactions")
+
+    # Step 2: Split data
+    split_index = int(0.7 * len(transactions))
+    train_data = transactions[:split_index]
+    test_data = transactions[split_index:]
+
+    # Step 3: Run Apriori
     results = find_optimal_thresholds(
         train_baskets=train_data,
         test_baskets=test_data,
-        support_values=[0.1, 0.2],
-        confidence_values=[0.3, 0.5],
-        lift_values=[1.0, 1.5],
+        support_values=[0.01, 0.02, 0.03],
+        confidence_values=[0.3, 0.4, 0.5],
+        lift_values=[1.0, 1.2, 1.5],
         output_csv="optimal_apriori_rules.csv",
         save_all_rules=True
     )
-    
-    if "error" not in results:
-        print(f"\n=== OPTIMAL PARAMETERS ===")
-        print(f"Support: {results['optimal_support']}")
-        print(f"Confidence: {results['optimal_confidence']}")
-        print(f"Lift: {results['optimal_lift']}")
-        print(f"Number of optimal rules: {len(results['rules'])}")
-        print(f"Optimal rules saved to: {results['rules_file']}")
-        
-        if results.get('all_rules_file'):
-            print(f"ALL rules saved to: {results['all_rules_file']}")
-        if results.get('parameter_summary_file'):
-            print(f"Parameter summary saved to: {results['parameter_summary_file']}")
-        
-        print(f"Parameter combinations tested: {results['total_parameter_combinations']}")
-        print(f"Successful combinations: {results['successful_combinations']}")
-        
-        # Test loading the optimal rules
-        loaded_rules = load_rules_from_csv("optimal_apriori_rules.csv")
-        print(f"Successfully loaded {len(loaded_rules)} optimal rules from CSV")
-        
-        # Test loading ALL rules
-        try:
-            all_rules = load_rules_from_csv("all_apriori_rules.csv")
-            print(f"Successfully loaded {len(all_rules)} total rules from ALL parameter combinations")
-        except:
-            print("Could not load all rules file")
-    else:
-        print(results["error"])
+
+    print(results)
 
 # Direct execution function
 def run_apriori_and_save(baskets, min_support=0.02, min_confidence=0.3, min_lift=1.0, output_file="apriori_rules.csv"):
